@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Отели Седоны</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="main-header">
+        <div class="header-top">
+          <nav class="main-navigation">
+            <ul>
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Фото и видео</a></li>
+              <li><a href="#">Карта штата</a></li>
+              <li><a href="#">Гостиницы</a></li>
+            </ul>
+            <div class="logo">
+            </div>
+          </nav>
+        </div>
+        <div class="header-bottom">
+          <div class="form-choice">
+            <form action="https://echo.htmlacademy.ru" method="post" class="choice">
+              <fieldset class="choice">
+                <!--я сомневаюсь, fielset или div для разметки  трех частей фотмы!-->
+                <legend>Инфраструктура</legend>
+                <input type="checkbox" name="item-1" id="item-1">
+                <label for="item-1">Бассейн</label>
+                <input type="checkbox" name="item-2" id="item-2">
+                <label for="item-2">Парковка</label>
+                <input type="checkbox" name="item-3" id="item-3">
+                <label for="item-3">Wi-FI</label>
+              </fieldset>
+              <fieldset class="choice">
+                <legend>Тип жилья</legend>
+                <input type="checkbox" name="type-1" id="type-1">
+                <label for="type-1">Гостиница</label>
+                <input type="checkbox" name="type-2" id="type-2">
+                <label for="type-2">Мотель</label>
+                <input type="checkbox" name="type-3" id="type-3">
+                <label for="type-3">Апартаменты</label>
+              </fieldset>
+              <fieldset>
+                <label for="day-price">Стоимость в сутки</label>
+                <div class="price-range">
+                  <input class="min-price" type="text" value="от 0">
+                  <input class="max-price" type="text" value="до 3000">
+                </div>
+                <input type="range" name="day-price" id="day-price" min="0" max="300">
+              </fieldset>
+              <input type="submit" value="Показать">
+            </form>
+          </div>
+        </div>
+      </header>
+      <div class="sort">
+        <h3>Найдено: <output>3</output></h3>
+        <b>сортировка</b>
+        <ul class="sort-choice">
+          <li><a href="#">по цене</a></li>
+          <li><a href="#">по типу</a></li>
+          <li><a href="#">по рейтингу</a></li>
+        </ul>
+        <div class="sort-control">
+          <a class="control-up" href="#"></a>
+          <a href="#" class="control-dowm"></a>
+        </div>
+      </div>
+      <section class="items">
+        <img src="#" alt="">
+        <h3 class="title">Amara resort &amp; spa</h3>
+        <span class="type">Гостиница</span>
+        <span class="price">от 4000 р.</span>
+        <a href="#" class="bnt-left">Подробнее</a>
+        <a href="#" class="btn-right">Забронировать</a>
+        <div class="rate">
+          <span class="rating">рейтинг: 8,5</span>
+        </div>
+      </section>
+      <section class="items">
+        <img src="#" alt="">
+        <h3 class="title">Desert Quail INN</h3>
+        <span class="type">Мотель</span>
+        <span class="price">От 3000 р.</span>
+        <a href="#" class="bnt-left">Подробнее</a>
+        <a href="#" class="btn-right">Забронировать</a>
+        <div class="rate">
+          <span class="rating">рейтинг: 8,9</span>
+        </div>
+      </section>
+      <section class="items">
+        <img src="#" alt="">
+        <h3 class="title">Villas at poco diablo</h3>
+        <span class="type">Апартаменты</span>
+        <span class="price">от 2000 р.</span>
+        <a href="#" class="bnt-left">Подробнее</a>
+        <a href="#" class="btn-right">Забронировать</a>
+        <div class="rate">
+          <span class="rating">рейтинг: 9,2</span>
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="container">
+          <section class="footer-contacts">
+            <span><a href="#">#VisitSedona</a></span>
+          </section>
+          <section class="footer-social">
+            <p></p>
+            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          </section>
+          <section class="footer-copyright">
+            <p>Website by:</p>
+            <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+          </section>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+</html>
