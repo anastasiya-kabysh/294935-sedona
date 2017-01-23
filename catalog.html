@@ -44,10 +44,12 @@
                 <label for="type-3">Апартаменты</label>
               </fieldset>
               <fieldset>
-                <label for="day-price">Стоимость в сутки</label>
+                <legend>Стоимость в сутки</legend>
                 <div class="price-range">
-                  <input class="min-price" type="text" value="от 0">
-                  <input class="max-price" type="text" value="до 3000">
+                  <label for="min-price">от</label>
+                  <input class="min-price" id="min-price" type="text" value="0">
+                  <label for="min-price">до</label>
+                  <input class="max-price" type="text" value="3000">
                 </div>
                 <input type="range" name="day-price" id="day-price" min="0" max="300">
               </fieldset>
@@ -57,7 +59,7 @@
         </div>
       </header>
       <div class="sort">
-        <h3>Найдено: <output>3</output></h3>
+        <h3>Найдено: 3</h3>
         <b>сортировка</b>
         <ul class="sort-choice">
           <li><a href="#">по цене</a></li>
@@ -78,6 +80,7 @@
         <a href="#" class="btn-right">Забронировать</a>
         <div class="rate">
           <span class="rating">рейтинг: 8,5</span>
+          <span class="stars stars-4">4 звезды</span>
         </div>
       </section>
       <section class="items">
@@ -89,6 +92,7 @@
         <a href="#" class="btn-right">Забронировать</a>
         <div class="rate">
           <span class="rating">рейтинг: 8,9</span>
+          <span class="stars stars-3">3 звезды</span>
         </div>
       </section>
       <section class="items">
@@ -100,6 +104,7 @@
         <a href="#" class="btn-right">Забронировать</a>
         <div class="rate">
           <span class="rating">рейтинг: 9,2</span>
+          <span class="stars stars-2">2 звезды</span>
         </div>
       </section>
       <footer class="main-footer">
@@ -108,7 +113,6 @@
             <span><a href="#">#VisitSedona</a></span>
           </section>
           <section class="footer-social">
-            <p></p>
             <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
             <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
             <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
