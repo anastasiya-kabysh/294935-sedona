@@ -45,13 +45,18 @@
               </fieldset>
               <fieldset>
                 <legend>Стоимость в сутки</legend>
-                <div class="price-range">
+                <div class="price-day">
                   <label for="min-price">от</label>
                   <input class="min-price" id="min-price" type="text" value="0">
                   <label for="min-price">до</label>
                   <input class="max-price" type="text" value="3000">
                 </div>
-                <input type="range" name="day-price" id="day-price" min="0" max="300">
+                <div class="price-range">
+                  <div class="price-scale"></div>
+                  <div class="price-bar"></div>
+                  <div class="price-toggle toggle-min"></div>
+                  <div class="price-toggle toggle-max"></div>
+                </div>
               </fieldset>
               <input type="submit" value="Показать">
             </form>
