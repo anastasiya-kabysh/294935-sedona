@@ -1,0 +1,12 @@
+body {
+  font-size: 14px;
+  font-family: "PT Sans Narrow", Helvetica, sans-serif;
+  line-height: 21;
+  /*в других строках есть 24 px, так что я не уверена что высота строки 21*/
+  font-weight: normal;
+  color: ;
+}
+
+h3 {
+  font-size: 21px;
+}
