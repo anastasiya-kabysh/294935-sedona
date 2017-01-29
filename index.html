@@ -4,26 +4,27 @@
   <head>
     <meta charset="utf-8">
     <title>Visit Sedona</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
     <div class="wrapper">
       <header class="main-header">
-        <div class="header-top">
-          <nav class="main-navigation">
-            <ul>
-              <li><a href="#">Информация</a></li>
-              <li><a href="#">Фото и видео</a></li>
-              <li><a href="#">Карта штата</a></li>
-              <li><a href="#">Гостиницы</a></li>
+        <div class="header-top clearfix">
+          <nav>
+            <ul class="main-nav">
+              <li class="main-nav-left"><a href="#">Информация</a></li>
+              <li class="main-nav-left"><a href="#">Фото и видео</a></li>
+              <li class="main-nav-right"><a href="#">Карта штата</a></li>
+              <li class="main-nav-right"><a href="#">Гостиницы</a></li>
             </ul>
+            <div class="logo">
+              <a href="#"><img src="img/grouplogo.png" width="138" height="70" alt="Логотип Седона"></a>
+            </div>
           </nav>
         </div>
-        <div class="logo">
-        </div>
         <div class="header-bottom">
-          <img src="img/background.jpg" width="1200" height="800" alt="Sedona">
+          <div class="header-pic"></div>
           <img src="img/group.png" width="458" height="352" alt="Sedona">
         </div>
       </header>
@@ -34,9 +35,11 @@
         </div>
         <section class="features">
           <div class="features-item">
-            <h3 class="features-title">Настоящий городок</h3>
-            <span>№1</span>
-            <p>Седона -не аттракцион для туристов, там течет своя жизнь!</p>
+            <div class="feature-side">
+              <h3 class="features-title">Настоящий городок</h3>
+              <span>&mdash; №1 &mdash;</span>
+              <p>Седона - не аттракцион для туристов, там течет своя жизнь!</p>
+            </div>
             <img class="features-image" src="img/sedona1.jpg" width="800" height="258" alt="Sedona">
           </div>
           <div class="features-desc">
@@ -56,82 +59,85 @@
         </section>
         <section class="features">
           <div class="features-item">
-            <h3 class="feature-title">Там есть мост дьявола</h3>
-            <span>№2</span>
-            <p class="description">Да, по нему можно пройтись! Если вы конечно осмелитесь</p>
+            <div class="feature-side">
+              <h3 class="feature-title">Там есть мост дьявола</h3>
+              <span>&mdash; №2 &mdash;</span>
+              <p class="description">Да, по нему можно пройтись! Если вы конечно осмелитесь</p>
+            </div>
             <img class="features-image" src="img/sedona2.jpg" width="800" height="258" alt="Sedona">
           </div>
           <div class="features-desc">
             <div class="preference">
               <h3 class="features-title">Небольшая площадь</h3>
-              <span>№3</span>
+              <span>&mdash; №3 &mdash;</span>
               <p class="description">все достопримечательности находятся очень близко</p>
             </div>
             <div class="preference">
               <h3 class="features-title">Красивая дорога</h3>
-              <span>№4</span>
+              <span>&mdash; №4 &mdash;</span>
               <p class="description">Ехать в седону из лас-вегаса совсем не скучно!</p>
             </div>
             <div class="preference">
               <h3 class="features-title">Мало туристов</h3>
-              <span>№5</span>
+              <span>&mdash; №5 &mdash;</span>
               <p class="description">Большинство едет в Гранд Каньон и толпится там</p>
             </div>
           </div>
         </section>
       </main>
       <div class="feedback">
-        <h2 class="feedback-title">Заинтересовались?</h2>
-        <p class="description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button class="btn-title"><h3>Поиск гостиницы в Седоне</h3></button>
-        <form class="feddback-form" action="index.html" method="post">
-          <div class="feedback-form-inner">
-            <label for="date-in">Дата заезда</label>
-            <input type="text" name="date-in" id="date-in">
-            <button type="button" name="calendar]"></button>
-          </div>
-          <div class="feedback-form-inner">
-            <label for="date-out">Дата выезда</label>
-            <input type="text" name="date-out" id="date-out">
-            <button type="button" name="calendar"></button>
-          </div>
-          <div class="feedback-form-inner">
-            <label for="adults">Взрослые</label>
-            <div class="counter">
-              <button type="button" name="up">+</button>
-              <input type="text" name="adults" id="adults" placeholder="2">
-              <button type="button" name="down">-</button>
+        <div class="feedback-description">
+          <h2>Заинтересовались?</h2>
+          <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        </div>
+        <div class="index-popup">
+          <button class="btn-title"><h3>Поиск гостиницы в Седоне</h3></button>
+          <form class="feddback-form" action="index.html" method="post">
+            <div class="feedback-form-inner">
+              <label for="date-in">Дата заезда</label>
+              <input type="text" name="date-in" id="date-in">
+              <button type="button" name="calendar]"></button>
             </div>
-          </div>
-          <div class="feedback-form-inner">
-            <label for="children">Дети</label>
-            <div class="counter">
-              <button type="button" name="up">+</button>
-              <input type="text" name="children" id="children" placeholder="0">
-              <button type="button" name="down">-</button>
+            <div class="feedback-form-inner">
+              <label for="date-out">Дата выезда</label>
+              <input type="text" name="date-out" id="date-out">
+              <button type="button" name="calendar"></button>
+            </div>
+            <div class="feedback-form-inner">
+              <label for="adults">Взрослые</label>
+              <div class="counter">
+                <button type="button" class="adults" name="up">+</button>
+                <input type="text" class="adults" name="adults" id="adults" placeholder="2">
+                <button type="button" class="adults" name="down">-</button>
+              </div>
+            </div>
+            <div class="feedback-form-inner">
+              <label for="children">Дети</label>
+              <div class="counter">
+                <button type="button" class="children" name="up">+</button>
+                <input type="text" class="children" name="children" id="children" placeholder="0">
+                <button type="button" class="children" name="down">-</button>
+              </div>
             </div>
             <input type="submit" value="Найти" class="btn">
-          </div>
-        </form>
+          </form>
+        </div>
         <div class="map">
         </div>
       </div>
-      <footer class="main-footer">
-        <div class="container">
-          <section class="footer-contacts">
-            <span><a href="#"><h3>#VisitSedona</h3></a></span>
-          </section>
-          <section class="footer-social">
-            <p></p>
-            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-          </section>
-          <section class="footer-copyright">
-            <p>Website by:</p>
-            <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-          </section>
-        </div>
+      <footer class="main-footer clearfix">
+        <section class="footer-contacts">
+          <span><a href="#"><h3>#VisitSedona</h3></a></span>
+        </section>
+        <section class="footer-social">
+          <a class="social-btn social-btn-1" href="#"></a>
+          <a class="social-btn social-btn-2" href="#"></a>
+          <a class="social-btn social-btn-3" href="#"></a>
+        </section>
+        <section class="footer-copyright">
+          <span>Website by:</span>
+          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+        </section>
       </footer>
     </div>
   </body>

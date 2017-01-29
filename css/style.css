@@ -1,12 +1,248 @@
 body {
   font-size: 14px;
   font-family: "PT Sans Narrow", Helvetica, sans-serif;
-  line-height: 21;
-  /*в других строках есть 24 px, так что я не уверена что высота строки 21*/
+  line-height: 21px;
+  ;
   font-weight: normal;
   color: ;
 }
 
 h3 {
   font-size: 21px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  min-width: 780px;
+  margin: 0 6%;
+}
+
+
+/*шапка с меню*/
+
+.header-top {
+  min-height: 56px;
+  outline: 1px solid black;
+}
+
+.main-nav>li {
+  display: inline-block;
+  outline: 1px solid black;
+}
+
+.main-nav-left {
+  float: left;
+  width: 240px;
+  /*почему левый край li не прилип к контейнеру?*/
+}
+
+.main-nav-right {
+  float: right;
+  width: 240px;
+}
+
+.logo {
+  margin-right: 53px;
+  margin-right: 53px;
+}
+
+.header-bottom {
+  min-height: 726px;
+  outline: 1px solid black;
+}
+
+.header-pic {
+  background-image: url("../img/background.jpg");
+}
+
+.subject {
+  outline: 1px solid black;
+  min-height: 216px;
+}
+
+
+/*центральный текст*/
+
+.subject h3 {
+  padding-top: 58px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 437px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.subject p {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+
+/*блоки преимуществ*/
+
+.features {
+  min-height: 586px;
+  font-size: 0;
+}
+
+.feature-side {
+  display: inline-block;
+  vertical-align: top;
+  min-height: 256px;
+  width: 400px;
+  outline: 1px solid black;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.features-image {
+  width: 66%;
+  box-sizing: border-box;
+  outline: 1px solid black;
+}
+
+.feature {
+  display: inline-block;
+  width: 400px;
+  min-height: 330px;
+  vertical-align: top;
+  font-size: 14px;
+  outline: 1px solid black;
+}
+
+.preference {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+  min-height: 257px;
+  font-size: 14px;
+  outline: 1px solid black;
+}
+
+.feedback-description {
+  width: 440px;
+  min-height: 293px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  outline: 1px solid black;
+}
+
+.feedback-description h2 {
+  padding-top: 57px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.feedback-description p {
+  padding-bottom: 46px;
+  text-align: center;
+}
+
+
+/*всплывающее окно*/
+
+.index-popup {
+  min-height: 481px;
+  width: 586px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-title {
+  min-height: 86px;
+  width: 586px;
+  margin-bottom: 55px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 346px;
+  min-height: 38px;
+  background-color: #f2f2f2;
+}
+
+.feedback-form-inner {
+  outline: 1px solid black;
+  margin-bottom: 29px;
+  width: 452px;
+  box-sizing: border-box;
+  margin-left: 55px;
+  margin-right: auto;
+  /*формы поплыли, не знаю какую ширину ставить*/
+}
+
+.feedback-form-inner:last-child {
+  margin-bottom: 54px;
+  /*как сделать 2 оставшиеся формы??*/
+}
+
+.index-popup .btn {
+  width: 458px;
+  min-height: 58px;
+  margin: 0 55px 55px 55px;
+  box-sizing: border-box;
+  background-color: #81b3d2;
+}
+
+
+/*футер*/
+
+.main-footer {
+  min-height: 120px;
+  outline: 1px solid black;
+}
+
+.footer-contacts, .footer-social {
+  float: left;
+}
+
+.footer-contacts {
+  margin-left: 132px;
+  width: 135px;
+}
+
+.footer-social {
+  margin-left: 132px;
+  margin-top: 17px;
+  margin-bottom: 55px;
+  outline: 1px solid black;
+  height: 48px;
+  width: 400px;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  /*куда распологать ссылки - сдева или справа с учетом вставки еще одной ссылки?*/
+}
+
+.footer-copyright {
+  float: right;
+  width: 195px;
+  margin-right: 103px;
+  margin-top: 22px;
+  margin-bottom: 41px;
+  margin-left: 101px;
+}
+
+
+/*страница каталога с фильтрами*/
+
+.catalog-header-bottom {
+  background-image: url();
+}
+
+.catalog-main {
+  min-height: 540px;
+  width: inherit;
+}
+
+.sort, .items {
+  float: left;
 }
