@@ -243,6 +243,58 @@ input[type="text"] {
   width: inherit;
 }
 
-.sort, .items {
-  float: left;
+.sort {
+  display: block;
+  min-height: 87px;
+  outline: 1px solid black;
 }
+
+.sort-choice {
+  float: left;
+  min-width: 528px;
+  padding-left: 73px;
+  outline: 1px solid black;
+}
+
+.sort-choice li {
+  display: inline-block;
+  margin-right: 33px;
+  outline: 1px solid black;
+  vertical-align: center;
+}
+
+.sort-control {
+  float: right;
+  outline: 1px solid black;
+}
+
+.items {
+  display: block;
+  min-height: 152px;
+  padding-left: 73px;
+  outline: 1px solid black;
+}
+
+.items-left {
+  float: left;
+  min-width: 528px;
+  margin-top: 30px;
+}
+
+.items-left>img, .items-desc {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.items-left>img {
+  margin-right: 31px;
+}
+
+.items-desc {
+  min-width: 258px;
+  min-height: 91px;
+  outline: 1px solid black;
+}
+
+
+/*почему все поплыло, не знаю*/
