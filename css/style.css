@@ -2,7 +2,6 @@ body {
   font-size: 14px;
   font-family: "PT Sans Narrow", Helvetica, sans-serif;
   line-height: 21px;
-  ;
   font-weight: normal;
   color: ;
 }
@@ -14,157 +13,164 @@ h3 {
 .wrapper {
   max-width: 1200px;
   min-width: 780px;
-  margin: 0 6%;
+  margin: 0 auto;
 }
 
 
 /*шапка с меню*/
 
 .header-top {
-  min-height: 56px;
+  outline: 1px solid black;
+  position: relative;
+}
+
+.main-nav {
+  padding-left: 0;
+  list-style: none;
   outline: 1px solid black;
 }
 
-.main-nav>li {
+.main-nav li {
   display: inline-block;
+  width: 20%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  text-align: center;
   outline: 1px solid black;
+  /*что делать с попиксельным выравниванием паддингов у li? каждому свой селектор?*/
+}
+
+.main-nav a {
+  text-decoration: none;
 }
 
 .main-nav-left {
   float: left;
-  width: 240px;
-  /*почему левый край li не прилип к контейнеру?*/
 }
 
 .main-nav-right {
   float: right;
-  width: 240px;
 }
 
 .logo {
-  margin-right: 53px;
-  margin-right: 53px;
+  position: absolute;
+  top: 0;
+  left: 45%;
 }
 
 .header-bottom {
-  min-height: 726px;
   outline: 1px solid black;
 }
 
-.header-pic {
-  background-image: url("../img/background.jpg");
+.header-bottom img {
+  margin-top: 62px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 23px;
+  outline: 1px solid black;
+  /*почему не центрируется картинка*/
 }
 
+
+}
 .subject {
   outline: 1px solid black;
-  min-height: 216px;
 }
-
 
 /*центральный текст*/
-
 .subject h3 {
-  padding-top: 58px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 437px;
+  margin-top: 61px;
   text-align: center;
-  padding-bottom: 25px;
+  padding-left: 31.67%;
+  padding-right: 31.67%;
+  margin-bottom: 33px;
+  outline: 1px solid black;
 }
-
 .subject p {
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 50px;
+  margin-bottom: 49px;
   text-align: center;
+  outline: 1px solid black;
+  /*маргины и паддинги - что правильнее применять тут?*/
 }
-
 
 /*блоки преимуществ*/
-
 .features {
-  min-height: 586px;
-  font-size: 0;
-}
-
-.feature-side {
-  display: inline-block;
-  vertical-align: top;
-  min-height: 256px;
-  width: 400px;
-  outline: 1px solid black;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-.features-image {
-  width: 66%;
-  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   outline: 1px solid black;
 }
-
 .feature {
-  display: inline-block;
-  width: 400px;
-  min-height: 330px;
-  vertical-align: top;
-  font-size: 14px;
   outline: 1px solid black;
+  flex: 1 1 33%;
+}
+.feature-pictured {
+  flex-basis: 100%;
+  padding-left: 66%;
+  position: relative;
+  overflow: hidden;
+}
+.feature-pictured img {
+  position: absolute;
+  left: 0%;
+  top: 0%;
 }
 
-.preference {
-  display: inline-block;
-  width: 400px;
-  vertical-align: top;
-  min-height: 257px;
-  font-size: 14px;
-  outline: 1px solid black;
+/*надо добавить селекторы для второй картинки для позиционирования*/
+.feature-preference {
+  width: 33, 33%;
 }
 
+/*почему три последние колонки не выстраиваются в ряд?*/
+
+/*текст перед всплывающим окном*/
 .feedback-description {
-  width: 440px;
-  min-height: 293px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
   outline: 1px solid black;
+  /*опять паддинги и маргины! и почему не видно рамки?*/
 }
-
 .feedback-description h2 {
-  padding-top: 57px;
-  padding-bottom: 30px;
+  margin-top: 51px;
   text-align: center;
 }
-
 .feedback-description p {
-  padding-bottom: 46px;
+  padding-left: 31.67%;
+  padding-right: 31.67%;
+  margin-bottom: 47px;
   text-align: center;
 }
-
 
 /*всплывающее окно*/
-
 .index-popup {
-  min-height: 481px;
-  width: 586px;
+  width: 47, 33%;
   margin-left: auto;
   margin-right: auto;
+  /*почему не цетрируется popup*/
 }
-
 .btn-title {
-  min-height: 86px;
-  width: 586px;
+  display: block;
+  padding-top: 33px;
+  padding-bottom: 31px;
+  padding-left: 140px;
+  padding-right: 139px;
   margin-bottom: 55px;
-  box-sizing: border-box;
   text-align: center;
+  background-color: #766357;
+  color: #ffffff;
 }
-
+.btn-title span {
+  text-align: center;
+  margin-top: 33px;
+  margin-bottom: 31px;
+  font-size: 21px;
+}
 input[type="text"] {
   width: 346px;
   min-height: 38px;
   background-color: #f2f2f2;
 }
-
 .feedback-form-inner {
   outline: 1px solid black;
   margin-bottom: 29px;
@@ -174,12 +180,10 @@ input[type="text"] {
   margin-right: auto;
   /*формы поплыли, не знаю какую ширину ставить*/
 }
-
 .feedback-form-inner:last-child {
   margin-bottom: 54px;
-  /*как сделать 2 оставшиеся формы??*/
+  /*как сделать 2 оставшиеся формы - взрослых и детей в один ряд??*/
 }
-
 .index-popup .btn {
   width: 458px;
   min-height: 58px;
@@ -188,23 +192,20 @@ input[type="text"] {
   background-color: #81b3d2;
 }
 
-
 /*футер*/
-
 .main-footer {
-  min-height: 120px;
   outline: 1px solid black;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
 }
-
-.footer-contacts, .footer-social {
-  float: left;
+.footer {
+  align-items: center;
+  flex-basis: 33.33%
 }
-
 .footer-contacts {
-  margin-left: 132px;
-  width: 135px;
+  margin-left: 11%;
 }
-
 .footer-social {
   margin-left: 132px;
   margin-top: 17px;
@@ -212,89 +213,87 @@ input[type="text"] {
   outline: 1px solid black;
   height: 48px;
   width: 400px;
+  text-align: center;
 }
-
 .social-btn {
   display: inline-block;
-  width: 46px;
-  height: 48px;
-  background-color: #81b3d2;
-  /*куда распологать ссылки - сдева или справа с учетом вставки еще одной ссылки?*/
 }
-
+.social-btn-1 {
+  background-image: url("");
+  background-repeat: no-repeat;
+  padding: 16px;
+  background-color: #81b3d2;
+}
+.social-btn-2 {
+  background-image: url("");
+  background-repeat: no-repeat;
+  padding: 16px;
+  background-color: #81b3d2;
+}
+.social-btn-3 {
+  background-image: url("");
+  background-repeat: no-repeat;
+  padding: 16px;
+  background-color: #81b3d2;
+}
 .footer-copyright {
-  float: right;
-  width: 195px;
   margin-right: 103px;
   margin-top: 22px;
   margin-bottom: 41px;
   margin-left: 101px;
 }
 
-
 /*страница каталога с фильтрами*/
-
 .catalog-header-bottom {
   background-image: url();
 }
-
 .catalog-main {
   min-height: 540px;
   width: inherit;
 }
-
 .sort {
   display: block;
   min-height: 87px;
   outline: 1px solid black;
 }
-
 .sort-choice {
   float: left;
   min-width: 528px;
   padding-left: 73px;
   outline: 1px solid black;
 }
-
 .sort-choice li {
   display: inline-block;
   margin-right: 33px;
   outline: 1px solid black;
   vertical-align: center;
 }
-
 .sort-control {
   float: right;
   outline: 1px solid black;
 }
-
 .items {
   display: block;
   min-height: 152px;
   padding-left: 73px;
   outline: 1px solid black;
 }
-
 .items-left {
   float: left;
   min-width: 528px;
   margin-top: 30px;
 }
-
 .items-left>img, .items-desc {
   display: inline-block;
   vertical-align: top;
 }
-
 .items-left>img {
   margin-right: 31px;
 }
-
 .items-desc {
   min-width: 258px;
   min-height: 91px;
   outline: 1px solid black;
 }
-
 
 /*почему все поплыло, не знаю*/
