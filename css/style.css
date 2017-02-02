@@ -16,6 +16,12 @@ h3 {
   margin: 0 auto;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 /*шапка с меню*/
 
@@ -25,32 +31,32 @@ h3 {
 }
 
 .main-nav {
-  padding-left: 0;
+  padding: 15px 0;
   list-style: none;
   outline: 1px solid black;
 }
 
-.main-nav li {
-  display: inline-block;
+.main-nav-item {
   width: 20%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  box-sizing: border-box;
-  text-align: center;
   outline: 1px solid black;
-  /*что делать с попиксельным выравниванием паддингов у li? каждому свой селектор?*/
 }
 
-.main-nav a {
-  text-decoration: none;
-}
-
-.main-nav-left {
+.main-nav-item:nth-child(odd) {
   float: left;
+  text-align: left;
 }
 
-.main-nav-right {
+.main-nav-item:nth-child(even) {
   float: right;
+  text-align: right;
+}
+
+.main-nav-item:nth-child(4n+1) {
+  margin-left: 6%;
+}
+
+.main-nav-item:nth-child(4n+2) {
+  margin-right: 6%;
 }
 
 .logo {
@@ -60,40 +66,48 @@ h3 {
 }
 
 .header-bottom {
+  padding-bottom: 23px;
+  padding-top: 76px;
+  margin-bottom: 55px;
+  overflow: hidden;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   outline: 1px solid black;
 }
 
 .header-bottom img {
-  margin-top: 62px;
+  display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 23px;
   outline: 1px solid black;
-  /*почему не центрируется картинка*/
 }
 
 
 }
 .subject {
+  background-color: #ffffff;
+  background-image: url("../img/subject.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: hidden;
   outline: 1px solid black;
 }
 
-/*центральный текст*/
+/*центральный текст  и картинка над ней*/
 .subject h3 {
-  margin-top: 61px;
   text-align: center;
   padding-left: 31.67%;
   padding-right: 31.67%;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
   outline: 1px solid black;
 }
 .subject p {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 49px;
   text-align: center;
+  margin-bottom: 50px;
   outline: 1px solid black;
-  /*маргины и паддинги - что правильнее применять тут?*/
 }
 
 /*блоки преимуществ*/
@@ -102,59 +116,67 @@ h3 {
   flex-flow: row wrap;
   justify-content: flex-start;
   outline: 1px solid black;
+  margin-bottom: 57px;
 }
 .feature {
   outline: 1px solid black;
   flex: 1 1 33%;
-}
-.feature-pictured {
-  flex-basis: 100%;
-  padding-left: 66%;
   position: relative;
   overflow: hidden;
 }
-.feature-pictured img {
+.feature-pictured-left {
+  flex-basis: 100%;
+  padding-right: 66.67%;
+}
+.feature-pictured-right {
+  flex-basis: 100%;
+  padding-left: 66.67%;
+}
+.feature-pictured-left img {
   position: absolute;
-  left: 0%;
-  top: 0%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
 }
-
-/*надо добавить селекторы для второй картинки для позиционирования*/
+.feature-pictured-right img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
 .feature-preference {
-  width: 33, 33%;
+  width: 33.33%;
 }
 
-/*почему три последние колонки не выстраиваются в ряд?*/
+/*сделать центровку текста в блоках?*/
 
 /*текст перед всплывающим окном*/
 .feedback-description {
   outline: 1px solid black;
-  /*опять паддинги и маргины! и почему не видно рамки?*/
+  margin-bottom: 47px;
 }
 .feedback-description h2 {
-  margin-top: 51px;
   text-align: center;
 }
 .feedback-description p {
   padding-left: 31.67%;
   padding-right: 31.67%;
-  margin-bottom: 47px;
   text-align: center;
 }
 
 /*всплывающее окно*/
 .index-popup {
-  width: 47, 33%;
+  width: 568px;
   margin-left: auto;
   margin-right: auto;
   /*почему не цетрируется popup*/
 }
 .btn-title {
   display: block;
-  padding-top: 33px;
-  padding-bottom: 31px;
-  padding-left: 140px;
-  padding-right: 139px;
+  width: 568px;
+  height: 86px;
   margin-bottom: 55px;
   text-align: center;
   background-color: #766357;
@@ -168,132 +190,162 @@ h3 {
 }
 input[type="text"] {
   width: 346px;
-  min-height: 38px;
+  height: 38px;
   background-color: #f2f2f2;
+  box-sizing: border-box;
 }
 .feedback-form-inner {
   outline: 1px solid black;
-  margin-bottom: 29px;
-  width: 452px;
-  box-sizing: border-box;
-  margin-left: 55px;
-  margin-right: auto;
-  /*формы поплыли, не знаю какую ширину ставить*/
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-bottom: 30px;
+  color: #000000;
 }
-.feedback-form-inner:last-child {
+.inner-left {
+  float: left;
+}
+.inner-left input[type="text"], .inner-right input[type="text"] {
+  width: 38px;
+  height: 38px;
+}
+.inner-right {
+  float: right;
   margin-bottom: 54px;
-  /*как сделать 2 оставшиеся формы - взрослых и детей в один ряд??*/
+}
+.inner-btn {
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
 }
 .index-popup .btn {
+  display: block;
   width: 458px;
   min-height: 58px;
-  margin: 0 55px 55px 55px;
+  margin-left: 55px;
+  margin-right: 55px;
   box-sizing: border-box;
   background-color: #81b3d2;
+}
+.map {
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
 }
 
 /*футер*/
 .main-footer {
+  margin-top: 78px;
   outline: 1px solid black;
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  ;
 }
 .footer {
-  align-items: center;
-  flex-basis: 33.33%
+  flex-basis: 1 1 33.33%;
+  margin: auto;
 }
-.footer-contacts {
-  margin-left: 11%;
-}
+
+/*все равно не получается точная центровка, разбежка 10px*/
+.footer-contacts {}
 .footer-social {
-  margin-left: 132px;
-  margin-top: 17px;
-  margin-bottom: 55px;
+  margin-top: 36px;
+  margin-bottom: 36px;
   outline: 1px solid black;
-  height: 48px;
-  width: 400px;
-  text-align: center;
 }
 .social-btn {
   display: inline-block;
+  margin-right: 6px;
+  width: 46px;
+  height: 48px;
 }
 .social-btn-1 {
-  background-image: url("");
+  background-image: url("../img/t.png");
   background-repeat: no-repeat;
-  padding: 16px;
   background-color: #81b3d2;
 }
 .social-btn-2 {
-  background-image: url("");
+  background-image: url("../img/f.png");
   background-repeat: no-repeat;
-  padding: 16px;
   background-color: #81b3d2;
 }
 .social-btn-3 {
-  background-image: url("");
+  background-image: url("../img/youtube.png");
   background-repeat: no-repeat;
-  padding: 16px;
   background-color: #81b3d2;
 }
-.footer-copyright {
-  margin-right: 103px;
-  margin-top: 22px;
-  margin-bottom: 41px;
-  margin-left: 101px;
-}
+.footer-copyright {}
 
 /*страница каталога с фильтрами*/
+
+/*фильтр*/
 .catalog-header-bottom {
-  background-image: url();
+  padding-top: 14px;
+  padding-left: 6%;
+  padding-right: 6%;
+  margin-bottom: 39px;
+  background-image: url("../img/filter_background.jpg");
 }
-.catalog-main {
-  min-height: 540px;
-  width: inherit;
+.choice-left {
+  float: left;
 }
-.sort {
+.choice-left li {
+  outline: 1px solid black;
+  padding-left: 0;
+  /*паддинг не работает!*/
+
+  list-style: none;
+}
+.choice-right {
+  float: right;
+  /*Вот как его правильно выровнять и задать длину?*/
+}
+
+/*выбор отелей*/
+main {
+  padding-left: 6%;
+  padding-right: 6%;
+}
+.hotels {
   display: block;
-  min-height: 87px;
   outline: 1px solid black;
 }
 .sort-choice {
   float: left;
-  min-width: 528px;
-  padding-left: 73px;
+  padding-left: 0;
   outline: 1px solid black;
 }
 .sort-choice li {
   display: inline-block;
-  margin-right: 33px;
   outline: 1px solid black;
   vertical-align: center;
 }
 .sort-control {
   float: right;
+  display: inline-block;
   outline: 1px solid black;
 }
-.items {
-  display: block;
-  min-height: 152px;
-  padding-left: 73px;
-  outline: 1px solid black;
+.control-up {
+  background-image: url("../img/up.png");
+  background-repeat: no-repeat;
+}
+.control-down {
+  background-image: url("../img/down.png");
+  background-repeat: no-repeat;
 }
 .items-left {
   float: left;
-  min-width: 528px;
-  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.items-left>img, .items-desc {
+.items-left img {
   display: inline-block;
-  vertical-align: top;
-}
-.items-left>img {
-  margin-right: 31px;
+  margin-right: 30px;
 }
 .items-desc {
-  min-width: 258px;
-  min-height: 91px;
-  outline: 1px solid black;
+  display: inline-block;
+  margin-right: 44.83%;
 }
-
-/*почему все поплыло, не знаю*/
+.rate {
+  float: right;
+}

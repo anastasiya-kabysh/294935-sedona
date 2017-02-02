@@ -13,10 +13,10 @@
         <div class="header-top clearfix">
           <nav>
             <ul class="main-nav">
-              <li class="main-nav-left"><a href="#">Информация</a></li>
-              <li class="main-nav-left"><a href="#">Фото и видео</a></li>
-              <li class="main-nav-right"><a href="#">Карта штата</a></li>
-              <li class="main-nav-right"><a href="#">Гостиницы</a></li>
+              <li class="main-nav-item"><a href="#">Информация</a></li>
+              <li class="main-nav-item"><a href="#">Фото и видео</a></li>
+              <li class="main-nav-item"><a href="#">Карта штата</a></li>
+              <li class="main-nav-item"><a href="#">Гостиницы</a></li>
             </ul>
           </nav>
           <div class="logo">
@@ -25,8 +25,8 @@
         </div>
         <div class="header-bottom">
           <img src="img/group.png" width="458" height="352" alt="Sedona">
+          <div class="image"></div>
         </div>
-        <div class="image"></div>
         <div class="subject">
           <h3>Седона - небольшой городок в аризоне, заслуживающий большего!</h3>
           <p class="description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -34,7 +34,7 @@
       </header>
       <main class="container">
         <section class="features">
-          <div class="feature feature-pictured">
+          <div class="feature feature-pictured-left">
             <h3 class="features-title">Настоящий городок</h3>
             <span>&mdash; №1 &mdash;</span>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь!</p>
@@ -52,9 +52,7 @@
             <h3 class="features-title">Сувениры</h3>
             <p class="description">Не только китайского, но и местного производства!</p>
           </div>
-        </section>
-        <section class="features">
-          <div class="feature feature-pictured">
+          <div class="feature feature-pictured-right">
             <h3 class="feature-title">Там есть мост дьявола</h3>
             <span>&mdash; №2 &mdash;</span>
             <p class="description">Да, по нему можно пройтись! Если вы конечно осмелитесь</p>
@@ -64,16 +62,16 @@
             <h3 class="features-title">Небольшая площадь</h3>
             <span>&mdash; №3 &mdash;</span>
             <p class="description">все достопримечательности находятся очень близко</p>
-            <div class="feature feature-preference">
-              <h3 class="features-title">Красивая дорога</h3>
-              <span>&mdash; №4 &mdash;</span>
-              <p class="description">Ехать в седону из лас-вегаса совсем не скучно!</p>
-            </div>
-            <div class="feature feature-preference">
-              <h3 class="features-title">Мало туристов</h3>
-              <span>&mdash; №5 &mdash;</span>
-              <p class="description">Большинство едет в Гранд Каньон и толпится там</p>
-            </div>
+          </div>
+          <div class="feature feature-preference">
+            <h3 class="features-title">Красивая дорога</h3>
+            <span>&mdash; №4 &mdash;</span>
+            <p class="description">Ехать в седону из лас-вегаса совсем не скучно!</p>
+          </div>
+          <div class="feature feature-preference">
+            <h3 class="features-title">Мало туристов</h3>
+            <span>&mdash; №5 &mdash;</span>
+            <p class="description">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
         </section>
       </main>
@@ -84,7 +82,7 @@
         </div>
         <div class="index-popup">
           <button class="btn-title"><span>Поиск гостиницы в Седоне</span></button>
-          <form class="feddback-form" action="index.html" method="post">
+          <form class="feedback-form clearfix" action="index.html" method="post">
             <div class="feedback-form-inner">
               <label for="date-in">Дата заезда</label>
               <input type="text" name="date-in" id="date-in">
@@ -95,20 +93,20 @@
               <input type="text" name="date-out" id="date-out">
               <button type="button" name="calendar"></button>
             </div>
-            <div class="feedback-form-inner">
+            <div class="feedback-form-inner inner-left">
               <label for="adults">Взрослые</label>
               <div class="counter">
-                <button type="button" class="adults" name="up">+</button>
-                <input type="text" class="adults" name="adults" id="adults" placeholder="2">
-                <button type="button" class="adults" name="down">-</button>
+                <button type="button" class="inner-btn" name="up">+</button>
+                <input type="text" name="adults" id="adults" placeholder="2">
+                <button type="button" class="inner-btn" name="down">-</button>
               </div>
             </div>
-            <div class="feedback-form-inner">
+            <div class="feedback-form-inner inner-right">
               <label for="children">Дети</label>
               <div class="counter">
-                <button type="button" class="children" name="up">+</button>
-                <input type="text" class="children" name="children" id="children" placeholder="0">
-                <button type="button" class="children" name="down">-</button>
+                <button type="button" class="inner-btn" name="up">+</button>
+                <input type="text" name="children" id="children" placeholder="0">
+                <button type="button" class="inner-btn" name="down">-</button>
               </div>
             </div>
             <input type="submit" value="Найти" class="btn">

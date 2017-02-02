@@ -13,38 +13,42 @@
         <div class="header-top clearfix">
           <nav>
             <ul class="main-nav">
-              <li class="main-nav-left"><a href="#">Информация</a></li>
-              <li class="main-nav-left"><a href="#">Фото и видео</a></li>
-              <li class="main-nav-right"><a href="#">Карта штата</a></li>
-              <li class="main-nav-right"><a href="#">Гостиницы</a></li>
+              <li class="main-nav-item"><a href="#">Информация</a></li>
+              <li class="main-nav-item"><a href="#">Фото и видео</a></li>
+              <li class="main-nav-item"><a href="#">Карта штата</a></li>
+              <li class="main-nav-item"><a href="#">Гостиницы</a></li>
             </ul>
-            <div class="logo">
-              <a href="#"><img src="img/grouplogo.png" width="138" height="70" alt="Логотип Седона"></a>
-            </div>
           </nav>
+          <div class="logo">
+            <a href="#"><img src="img/grouplogo.png" width="138" height="70" alt="Логотип Седона"></a>
+          </div>
         </div>
         <div class="catalog-header-bottom">
-          <div class="form-choice">
+          <div class="form-choice clearfix">
             <form action="https://echo.htmlacademy.ru" method="post" class="choice">
-              <fieldset class="choice">
+              <fieldset class="form-choice choice-left">
                 <legend>Инфраструктура</legend>
-                <input type="checkbox" name="item-1" id="item-1">
-                <label for="item-1">Бассейн</label>
-                <input type="checkbox" name="item-2" id="item-2">
-                <label for="item-2">Парковка</label>
-                <input type="checkbox" name="item-3" id="item-3">
-                <label for="item-3">Wi-FI</label>
+                <ul>
+                  <li><input type="checkbox" name="item-1" id="item-1">
+                    <label for="item-1">Бассейн</label></li>
+                  <li><input type="checkbox" name="item-2" id="item-2">
+                    <label for="item-2">Парковка</label></li>
+                  <li><input type="checkbox" name="item-3" id="item-3">
+                    <label for="item-3">Wi-FI</label></li>
+                </ul>
               </fieldset>
-              <fieldset class="choice">
+              <fieldset class="form-choice choice-left">
                 <legend>Тип жилья</legend>
-                <input type="checkbox" name="type-1" id="type-1">
-                <label for="type-1">Гостиница</label>
-                <input type="checkbox" name="type-2" id="type-2">
-                <label for="type-2">Мотель</label>
-                <input type="checkbox" name="type-3" id="type-3">
-                <label for="type-3">Апартаменты</label>
+                <ul>
+                  <li> <input type="checkbox" name="type-1" id="type-1">
+                    <label for="type-1">Гостиница</label></li>
+                  <li><input type="checkbox" name="type-2" id="type-2">
+                    <label for="type-2">Мотель</label></li>
+                  <li><input type="checkbox" name="type-3" id="type-3">
+                    <label for="type-3">Апартаменты</label></li>
+                </ul>
               </fieldset>
-              <fieldset>
+              <fieldset class="form-choice choice-right">
                 <legend>Стоимость в сутки</legend>
                 <div class="price-day">
                   <label for="min-price">от</label>
@@ -59,16 +63,16 @@
                   <div class="price-toggle toggle-max"></div>
                 </div>
               </fieldset>
-              <input type="submit" value="Показать">
+              <input type="submit" value="Показать" class="choice-right btn-choice">
             </form>
           </div>
         </div>
       </header>
       <main class="catalog-main clearfix">
-        <div class="sort clearfix">
+        <div class="hotels sort clearfix">
           <ul class="sort-choice">
             <li>
-              <h3>Найдено: 3</h3></li>
+              <span>Найдено: 3</span></li>
             <li><b>сортировка</b></li>
             <li><a href="#">по цене</a></li>
             <li><a href="#">по типу</a></li>
@@ -79,7 +83,7 @@
             <a href="#" class="control-dowm"></a>
           </div>
         </div>
-        <section class="items clearfix">
+        <section class="hotels items clearfix">
           <div class="items-left">
             <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort &amp; spa">
             <div class="items-desc">
@@ -95,7 +99,7 @@
             <span class="stars stars-4">4 звезды</span>
           </div>
         </section>
-        <section class="items clearfix">
+        <section class="hotels items clearfix">
           <div class="items-left">
             <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail INN">
             <div class="items-desc">
@@ -111,7 +115,7 @@
             <span class="stars stars-3">3 звезды</span>
           </div>
         </section>
-        <section class="items clearfix">
+        <section class="hotels items clearfix">
           <div class="items-left">
             <img src="img/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             <div class="items-desc">
@@ -120,29 +124,29 @@
               <span class="price">от 2000 р.</span>
               <a href="#" class="bnt-left">Подробнее</a>
               <a href="#" class="btn-right">Забронировать</a>
-              <div class="items-desc">
-              </div>
-              <div class="rate">
-                <span class="rating">рейтинг: 9,2</span>
-                <span class="stars stars-2">2 звезды</span>
-              </div>
+            </div>
+            <div class="rate">
+              <span class="rating">рейтинг: 9,2</span>
+              <span class="stars stars-2">2 звезды</span>
+            </div>
+          </div>
         </section>
       </main>
-      <footer class="main-footer clearfix">
-        <section class="footer-contacts">
+      <footer class="main-footer">
+        <section class="footer footer-contacts">
           <span><a href="#"><h3>#VisitSedona</h3></a></span>
         </section>
-        <section class="footer-social">
+        <section class="footer footer-social">
           <a class="social-btn social-btn-1" href="#"></a>
           <a class="social-btn social-btn-2" href="#"></a>
           <a class="social-btn social-btn-3" href="#"></a>
         </section>
-        <section class="footer-copyright">
+        <section class="footer footer-copyright">
           <span>Website by:</span>
           <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
         </section>
       </footer>
-      </div>
+    </div>
   </body>
 
 </html>
