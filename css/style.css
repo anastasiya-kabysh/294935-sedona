@@ -1,13 +1,14 @@
 body {
   font-size: 14px;
-  font-family: "PT Sans Narrow", Helvetica, sans-serif;
+  font-family: "PT Sans", Helvetica, sans-serif;
   line-height: 21px;
-  font-weight: normal;
+  font-weight: 700;
   color: ;
 }
 
 h3 {
   font-size: 21px;
+  line-height: 26px;
 }
 
 .wrapper {
@@ -25,20 +26,21 @@ h3 {
 
 /*шапка с меню*/
 
+.main-header {}
+
 .header-top {
-  outline: 1px solid black;
   position: relative;
+  background-image: url("../img/headertop.png");
+  color: #ffffff;
 }
 
 .main-nav {
   padding: 15px 0;
   list-style: none;
-  outline: 1px solid black;
 }
 
 .main-nav-item {
   width: 20%;
-  outline: 1px solid black;
 }
 
 .main-nav-item:nth-child(odd) {
@@ -59,11 +61,23 @@ h3 {
   margin-right: 6%;
 }
 
+.main-nav-item a {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+}
+
 .logo {
   position: absolute;
   top: 0;
-  left: 45%;
+  left: 44.17%;
 }
+
+
+/*почему логитип странно вверху выглядит? и как опустить вниз тор - с 50 до 67 пикселей как на макете */
 
 .header-bottom {
   padding-bottom: 23px;
@@ -73,7 +87,12 @@ h3 {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  outline: 1px solid black;
+}
+
+.index-mask {
+  background-image: url("../img/headerbottom.png");
+  background-repeat: no-repeat;
+  background-size: 100% 4.75%;
 }
 
 .header-bottom img {
@@ -84,6 +103,9 @@ h3 {
 }
 
 
+/*как поставить маску на картинку*/
+
+
 }
 .subject {
   background-color: #ffffff;
@@ -91,7 +113,6 @@ h3 {
   background-repeat: no-repeat;
   background-size: 100%;
   overflow: hidden;
-  outline: 1px solid black;
 }
 
 /*центральный текст  и картинка над ней*/
@@ -100,18 +121,28 @@ h3 {
   padding-left: 31.67%;
   padding-right: 31.67%;
   margin-bottom: 31px;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
   outline: 1px solid black;
+  /*почему текст не становится как на картинке, при заданных отступах?*/
 }
 .subject p {
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   margin-bottom: 50px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #333333;
   outline: 1px solid black;
 }
 
 /*блоки преимуществ*/
 .features {
+  /*почему фичи стали уже чем основной блок*/
+
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -126,11 +157,11 @@ h3 {
 }
 .feature-pictured-left {
   flex-basis: 100%;
-  padding-right: 66.67%;
-}
-.feature-pictured-right {
-  flex-basis: 100%;
-  padding-left: 66.67%;
+  padding-right: 71.67%;
+  padding-left: 5%;
+  padding-top: 4.17%;
+  padding-bottom: 4.17%;
+  background-color: #81b3d2;
 }
 .feature-pictured-left img {
   position: absolute;
@@ -139,6 +170,73 @@ h3 {
   bottom: 0;
   margin: 0 auto;
 }
+.feature-pictured-left h3 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  /*как выравнивать по центру тект, если ниже текст большего размера?*/
+}
+.feature-pictured-left span {
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.feature-pictured-left p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.feature-desc {
+  width: 33.33%;
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 7.08%;
+  background-color: #ffffff;
+}
+.feature-desc h3 {
+  padding-left: 15.25%;
+  padding-right: 15.25%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+}
+.feature-desc p {
+  padding-left: 15.25%;
+  padding-right: 15.25%;
+  text-align: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #333333;
+  /*может картинкой тект вырезать? непонятно какой шрифт и отступы*/
+}
+.feature-desc::before {
+  position: absolute;
+  background-image: url("../img/hause.png");
+  background-repeat: no-repeat;
+  top: 0;
+  left: 50%;
+}
+.feature-pictured-right {
+  flex-basis: 100%;
+  padding-left: 71.67%;
+  padding-right: 5%;
+  padding-top: 4.17%;
+  padding-bottom: 4.17%;
+  background-color: #81b3d2;
+}
 .feature-pictured-right img {
   position: absolute;
   top: 0;
@@ -146,8 +244,54 @@ h3 {
   bottom: 0;
   margin: 0 auto;
 }
+.feature-pictured-right h3 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+}
+.feature-pictured-right span {
+  /*не центрируется спан??*/
+
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.feature-pictured-right p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 .feature-preference {
   width: 33.33%;
+  background-color: #eeeeee;
+  padding-top: 4.17%;
+  padding-bottom: 5.25%;
+}
+.feature-preference h3 {
+  padding-left: 23.75%;
+  padding-right: 23.75;
+  text-align: center;
+  text-transform: uppercase;
+}
+.feature-preference span {
+  padding-left: 23.75%;
+  padding-right: 23.75;
+  text-align: center;
+}
+.feature-preference p {
+  padding-left: 23.75%;
+  padding-right: 23.75;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /*сделать центровку текста в блоках?*/
