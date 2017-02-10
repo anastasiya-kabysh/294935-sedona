@@ -3,6 +3,7 @@ body {
   font-family: "PT Sans", Helvetica, sans-serif;
   line-height: 21px;
   font-weight: 700;
+  background-color: #f2f2f2;
 }
 
 .wrapper {
@@ -40,6 +41,7 @@ body {
 }
 
 .main-nav {
+  margin: 0;
   padding: 15px 0;
   list-style: none;
 }
@@ -86,13 +88,13 @@ body {
 
 .header-bottom {
   padding-top: 76px;
-  margin-bottom: 61px;
+  padding-bottom: 80px;
   overflow: hidden;
   background-image: url("../img/headerbottom.png"), url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 70px 100%;
+  background-size: 100% 70px, 100%;
   background-repeat: no-repeat;
-  background-position: bottom, center, center;
+  background-position: bottom center, bottom;
 }
 
 
@@ -102,10 +104,11 @@ body {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 80px;
 }
 
 .subject {
+  padding-top: 61px;
+  padding-bottom: 56px;
   background-color: #ffffff;
   background-image: url("../img/subject.png");
   background-repeat: repeat;
@@ -132,7 +135,6 @@ body {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
   text-align: center;
   font-size: 14px;
   line-height: 26px;
@@ -148,7 +150,6 @@ body {
   flex-flow: row wrap;
   justify-content: flex-start;
   outline: 1px solid black;
-  margin-bottom: 57px;
 }
 
 .feature {
@@ -156,6 +157,28 @@ body {
   flex: 1 1 33%;
   position: relative;
   overflow: hidden;
+}
+
+.features-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+}
+
+.description {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #333333;
 }
 
 .feature-pictured-left {
@@ -176,15 +199,6 @@ body {
   margin: 0 auto;
 }
 
-.feature-pictured-left h3 {
-  padding: 0;
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #ffffff;
-  /*как выравнивать по центру тект, если ниже текст большего размера?*/
-}
-
 .feature-pictured-left span {
   font-size: 14px;
   line-height: 26px;
@@ -192,76 +206,40 @@ body {
   color: #ffffff;
 }
 
-.feature-pictured-left p {
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
 .feature-desc {
-  position: relative;
   width: 33.33%;
-  padding-top: 160px;
-  padding-bottom: 85px;
+  padding-top: 60px;
+  padding-bottom: 80px;
   background-color: #ffffff;
+  text-align: center;
 }
 
-.feature.icon-house::before {
+.feature.icon-house::before, .feature.icon-burger::before, .feature.icon-souvenirs::before {
   content: "";
-  display: block;
-  position: absolute;
-  width: 74px;
-  height: 74px;
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 75px;
+  height: 75px;
   background-image: url("../img/hause.png");
   background-repeat: no-repeat;
-  /*как поставить позиционирование??*/
+}
+
+.feature.icon-house p {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 
 /*как цетровку сделать параграфов? везде отступы разные*/
 
-.feature.icon-burger::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 74px;
-  height: 74px;
-  background-image: url("../img/burger.png");
-  background-repeat: no-repeat;
+.feature.icon-burger p {
+  padding-left: 55px;
+  padding-right: 55px;
 }
 
-.feature.icon-souvenirs::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 74px;
-  height: 74px;
-  background-image: url("../img/souvenirs.png");
-  background-repeat: no-repeat;
-}
-
-.feature-desc h3 {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #000000;
-  text-align: center;
-}
-
-.feature-desc p {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  text-align: center;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #333333;
+.feature.icon-souvenirs p {
+  padding-left: 65px;
+  padding-right: 65px;
 }
 
 .feature-pictured-right {
@@ -282,24 +260,7 @@ body {
   margin: 0 auto;
 }
 
-.feature-pictured-right h3 {
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #ffffff;
-}
-
 .feature-pictured-right span {
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.feature-pictured-right p {
-  padding: 0;
-  margin: 0;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
@@ -308,31 +269,22 @@ body {
 
 .feature-preference {
   width: 33.33%;
+  padding-top: 50px;
+  padding-bottom: 60px;
   background-color: #eeeeee;
-  padding-top: 4.17%;
-  padding-bottom: 5.25%;
   text-align: center;
+}
+
+.feature-preference p {
+  padding-left: 70px;
+  padding-right: 70px;
+  ;
 }
 
 
 /*надо проставить паддинги-маргины у нижних фич*/
 
-.feature-preference h3 {
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #000000;
-}
-
 .feature-preference span {
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #333333;
-}
-
-.feature-preference p {
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
@@ -344,6 +296,13 @@ body {
 
 
 /*текст перед всплывающим окном*/
+
+.feedback {
+  display: block;
+  padding-top: 57px;
+  background-color: #ffffff;
+  color: #000000;
+}
 
 .feedback-description {
   text-align: center;
@@ -416,7 +375,7 @@ body {
 }
 
 .feedback-form {
-  padding: 55px 0;
+  padding: 55px;
   position: absolute;
   top: 86px;
   left: 50%;
@@ -429,15 +388,9 @@ body {
   line-height: normal;
 }
 
-.feedback-form .date-inner {
-  width: 346px;
-  height: 38px;
-  padding-right: 45px;
-  border: none;
-  background-color: #f2f2f2;
-}
-
 .feedback-form-inner {
+  padding: 0;
+  margin: 0;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
@@ -445,7 +398,40 @@ body {
   color: #000000;
 }
 
+.inner-field {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  position: relative;
+  padding-left: 0;
+}
+
+.inner-field input {
+  height: 38px;
+  align-self: flex-end;
+  width: 346px;
+  border: none;
+  background-color: #f2f2f2;
+  /*как подвинуть к правому краю*??*/
+}
+
+.inner-field button {
+  align-self: middle;
+  display: block;
+  position: absolute;
+  left: 93%;
+  width: 21px;
+  height: 22px;
+  border: none;
+  background-color: #f2f2f2;
+  background-image: url("../img/calendar.png");
+  background-size: auto;
+}
+
 .feedback-form-inner label {
+  align-self: middle;
   color: #000000;
   font-family: "PT Sans", Helvetica, sans-serif;
   font-weight: bold;
@@ -456,23 +442,37 @@ body {
 
 .inner-left {
   float: left;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
   margin: 0;
-  width: 50%;
+  max-width: 50%;
   margin-bottom: 54px;
 }
 
 .inner-left input, .inner-right input {
   height: 38px;
+  flex-basis: 1 1 100%;
+}
+
+.inner-left label, .inner-right label {
+  padding-right: 41px;
 }
 
 
 /*как все в одну строку поместить?*/
 
 .inner-right {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
   float: right;
   margin: 0;
   margin-bottom: 54px;
-  width: 50%;
+  max-width: 50%;
 }
 
 .feedback-form-inner .counter {
@@ -493,10 +493,11 @@ body {
 
 .modal-content .btn {
   display: block;
-  width: 458px;
+  width: 100%;
   min-height: 58px;
-  margin-left: 55px;
-  margin-right: 55px;
+  margin-left: auto;
+  ;
+  margin-right: auto;
   border: none;
   box-sizing: border-box;
   background-color: #81b3d2;
@@ -539,6 +540,8 @@ body {
 }
 
 .footer-contacts {
+  margin-top: 36px;
+  margin-bottom: 36px;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
@@ -553,10 +556,16 @@ body {
   margin-top: 36px;
   margin-bottom: 36px;
   outline: 1px solid black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  outline: 1px solid black;
 }
 
 .social-btn {
-  display: inline-block;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   margin-right: 6px;
   width: 46px;
   height: 48px;
@@ -566,36 +575,47 @@ body {
   background-color: #81b3d2;
   background-image: url("../img/t.png");
   background-repeat: no-repeat;
-  background-position: 15px 15px;
+  background-position: 50% 50%;
+  align-self: center;
 }
 
 .social-btn-2 {
   background-image: url("../img/f.png");
   background-repeat: no-repeat;
   background-color: #81b3d2;
-  background-position: 15px 15px;
+  background-position: 50% 50%;
+  align-self: center;
 }
 
 .social-btn-3 {
+  margin-right: 0;
   background-image: url("../img/youtube.png");
   background-repeat: no-repeat;
   background-color: #81b3d2;
-  background-position: 15px 15px;
+  background-position: 50% 50%;
+  align-self: center;
 }
 
 .footer-copyright {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
   font-size: 14px;
   line-height: 26px;
 }
 
 .footer-copyright span {
-  display: inline-block;
+  align-self: center;
+  margin-right: 8px;
   color: #000000;
   text-transform: uppercase;
 }
 
 .footer-copyright a {
-  display: inline-block;
+  align-self: center;
   height: 39px;
   width: 113px;
   background-image: url("../img/copyright.png");
