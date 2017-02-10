@@ -3,18 +3,13 @@ body {
   font-family: "PT Sans", Helvetica, sans-serif;
   line-height: 21px;
   font-weight: 700;
-  color: ;
-}
-
-h3 {
-  font-size: 21px;
-  line-height: 26px;
 }
 
 .wrapper {
   max-width: 1200px;
   min-width: 780px;
   margin: 0 auto;
+  position: relative;
 }
 
 .clearfix::after {
@@ -26,12 +21,22 @@ h3 {
 
 /*шапка с меню*/
 
-.main-header {}
+.main-header {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*чтоза полоска наверху над хедером?*/
 
 .header-top {
   position: relative;
   background-image: url("../img/headertop.png");
   color: #ffffff;
+}
+
+.header-top {
+  min-height: 56px;
 }
 
 .main-nav {
@@ -80,43 +85,39 @@ h3 {
 /*почему логитип странно вверху выглядит? и как опустить вниз тор - с 50 до 67 пикселей как на макете */
 
 .header-bottom {
-  padding-bottom: 23px;
   padding-top: 76px;
-  margin-bottom: 55px;
+  margin-bottom: 61px;
   overflow: hidden;
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/headerbottom.png"), url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 70px 100%;
+  background-repeat: no-repeat;
+  background-position: bottom, center, center;
 }
 
-.index-mask {
-  background-image: url("../img/headerbottom.png");
-  background-repeat: no-repeat;
-  background-size: 100% 4.75%;
-}
+
+/*ак подвинуть фото с горами повыше?*/
 
 .header-bottom img {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  outline: 1px solid black;
+  margin-bottom: 80px;
 }
 
-
-/*как поставить маску на картинку*/
-
-
-}
 .subject {
   background-color: #ffffff;
   background-image: url("../img/subject.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-repeat: repeat;
   overflow: hidden;
 }
 
+
 /*центральный текст  и картинка над ней*/
+
 .subject h3 {
+  margin: 0;
+  padding: 0;
   text-align: center;
   padding-left: 31.67%;
   padding-right: 31.67%;
@@ -124,10 +125,11 @@ h3 {
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
-  outline: 1px solid black;
-  /*почему текст не становится как на картинке, при заданных отступах?*/
 }
+
 .subject p {
+  margin: 0;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -136,25 +138,26 @@ h3 {
   line-height: 26px;
   text-transform: uppercase;
   color: #333333;
-  outline: 1px solid black;
 }
 
-/*блоки преимуществ*/
-.features {
-  /*почему фичи стали уже чем основной блок*/
 
+/*блоки преимуществ*/
+
+.features {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   outline: 1px solid black;
   margin-bottom: 57px;
 }
+
 .feature {
   outline: 1px solid black;
   flex: 1 1 33%;
   position: relative;
   overflow: hidden;
 }
+
 .feature-pictured-left {
   flex-basis: 100%;
   padding-right: 71.67%;
@@ -162,7 +165,9 @@ h3 {
   padding-top: 4.17%;
   padding-bottom: 4.17%;
   background-color: #81b3d2;
+  text-align: center;
 }
+
 .feature-pictured-left img {
   position: absolute;
   top: 0;
@@ -170,73 +175,105 @@ h3 {
   bottom: 0;
   margin: 0 auto;
 }
+
 .feature-pictured-left h3 {
   padding: 0;
   margin: 0;
-  text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   color: #ffffff;
   /*как выравнивать по центру тект, если ниже текст большего размера?*/
 }
+
 .feature-pictured-left span {
-  text-align: center;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .feature-pictured-left p {
   padding: 0;
   margin: 0;
-  text-align: center;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .feature-desc {
-  width: 33.33%;
   position: relative;
-  padding-top: 5%;
-  padding-bottom: 7.08%;
+  width: 33.33%;
+  padding-top: 160px;
+  padding-bottom: 85px;
   background-color: #ffffff;
 }
+
+.feature.icon-house::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  background-image: url("../img/hause.png");
+  background-repeat: no-repeat;
+  /*как поставить позиционирование??*/
+}
+
+
+/*как цетровку сделать параграфов? везде отступы разные*/
+
+.feature.icon-burger::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  background-image: url("../img/burger.png");
+  background-repeat: no-repeat;
+}
+
+.feature.icon-souvenirs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  background-image: url("../img/souvenirs.png");
+  background-repeat: no-repeat;
+}
+
 .feature-desc h3 {
-  padding-left: 15.25%;
-  padding-right: 15.25%;
+  padding: 0;
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   color: #000000;
   text-align: center;
 }
+
 .feature-desc p {
-  padding-left: 15.25%;
-  padding-right: 15.25%;
+  padding: 0;
+  margin: 0;
   text-align: center;
   text-align: center;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   color: #333333;
-  /*может картинкой тект вырезать? непонятно какой шрифт и отступы*/
 }
-.feature-desc::before {
-  position: absolute;
-  background-image: url("../img/hause.png");
-  background-repeat: no-repeat;
-  top: 0;
-  left: 50%;
-}
+
 .feature-pictured-right {
   flex-basis: 100%;
   padding-left: 71.67%;
   padding-right: 5%;
-  padding-top: 4.17%;
-  padding-bottom: 4.17%;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  text-align: center;
   background-color: #81b3d2;
 }
+
 .feature-pictured-right img {
   position: absolute;
   top: 0;
@@ -244,205 +281,502 @@ h3 {
   bottom: 0;
   margin: 0 auto;
 }
+
 .feature-pictured-right h3 {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
   font-weight: 700;
-  text-align: center;
   color: #ffffff;
 }
-.feature-pictured-right span {
-  /*не центрируется спан??*/
 
-  text-align: center;
+.feature-pictured-right span {
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .feature-pictured-right p {
   padding: 0;
   margin: 0;
-  text-align: center;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .feature-preference {
   width: 33.33%;
   background-color: #eeeeee;
   padding-top: 4.17%;
   padding-bottom: 5.25%;
+  text-align: center;
 }
+
+
+/*надо проставить паддинги-маргины у нижних фич*/
+
 .feature-preference h3 {
-  padding-left: 23.75%;
-  padding-right: 23.75;
-  text-align: center;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
 }
+
 .feature-preference span {
-  padding-left: 23.75%;
-  padding-right: 23.75;
-  text-align: center;
-}
-.feature-preference p {
-  padding-left: 23.75%;
-  padding-right: 23.75;
-  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
   text-transform: uppercase;
+  color: #333333;
 }
+
+.feature-preference p {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
 
 /*сделать центровку текста в блоках?*/
 
+
 /*текст перед всплывающим окном*/
+
 .feedback-description {
-  outline: 1px solid black;
-  margin-bottom: 47px;
-}
-.feedback-description h2 {
   text-align: center;
-}
-.feedback-description p {
-  padding-left: 31.67%;
-  padding-right: 31.67%;
-  text-align: center;
+  background-color: #ffffff;
 }
 
+
+/*неизвестен размер шрифта в Заинтересовались?*/
+
+.feedback-description h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.feedback-description p {
+  padding: 0;
+  margin: 0;
+  padding-left: 31.67%;
+  padding-right: 31.67%;
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+
 /*всплывающее окно*/
-.index-popup {
+
+.modal-content {
   width: 568px;
   margin-left: auto;
   margin-right: auto;
-  /*почему не цетрируется popup*/
+  position: relative;
+  background-color: #ffffff;
+  background-image: url("../img/modalback.png");
+  background-repeat: repeat;
 }
-.btn-title {
+
+.modal-content .btn-title {
   display: block;
   width: 568px;
   height: 86px;
-  margin-bottom: 55px;
+  border: none;
   text-align: center;
   background-color: #766357;
   color: #ffffff;
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
+
 .btn-title span {
-  text-align: center;
   margin-top: 33px;
   margin-bottom: 31px;
+  font-family: "PT Sans", Helvetica, sans-serif;
   font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: normal;
 }
-input[type="text"] {
+
+.feedback-form {
+  padding: 55px 0;
+  position: absolute;
+  top: 86px;
+  left: 50%;
+  margin-left: -286px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.feedback-form .date-inner {
   width: 346px;
   height: 38px;
+  padding-right: 45px;
+  border: none;
   background-color: #f2f2f2;
-  box-sizing: border-box;
 }
+
 .feedback-form-inner {
-  outline: 1px solid black;
-  padding-left: 55px;
-  padding-right: 55px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
+  outline: 1px solid black;
   color: #000000;
 }
+
+.feedback-form-inner label {
+  color: #000000;
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
 .inner-left {
   float: left;
-}
-.inner-left input[type="text"], .inner-right input[type="text"] {
-  width: 38px;
-  height: 38px;
-}
-.inner-right {
-  float: right;
+  margin: 0;
+  width: 50%;
   margin-bottom: 54px;
 }
-.inner-btn {
+
+.inner-left input, .inner-right input {
+  height: 38px;
+}
+
+
+/*как все в одну строку поместить?*/
+
+.inner-right {
+  float: right;
+  margin: 0;
+  margin-bottom: 54px;
+  width: 50%;
+}
+
+.feedback-form-inner .counter {
+  font-size: 0;
+}
+
+.counter button, .counter input {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-align: center;
   width: 38px;
   height: 38px;
   background-color: #f2f2f2;
+  font-size: 14px;
 }
-.index-popup .btn {
+
+.modal-content .btn {
   display: block;
   width: 458px;
   min-height: 58px;
   margin-left: 55px;
   margin-right: 55px;
+  border: none;
   box-sizing: border-box;
   background-color: #81b3d2;
-}
-.map {
-  background-image: url("../img/map.jpg");
-  background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
+.index-map {
+  height: 593px;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 593px;
+}
+
+
 /*футер*/
+
 .main-footer {
-  margin-top: 78px;
-  outline: 1px solid black;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  ;
+  background-image: url("../img/footer.png");
+  background-repeat: repeat;
+  opacity: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  outline: 1px solid black;
 }
+
 .footer {
   flex-basis: 1 1 33.33%;
   margin: auto;
 }
 
-/*все равно не получается точная центровка, разбежка 10px*/
-.footer-contacts {}
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.footer-contacts a {
+  color: #000000;
+  text-decoration: none;
+}
+
 .footer-social {
   margin-top: 36px;
   margin-bottom: 36px;
   outline: 1px solid black;
 }
+
 .social-btn {
   display: inline-block;
   margin-right: 6px;
   width: 46px;
   height: 48px;
 }
+
 .social-btn-1 {
+  background-color: #81b3d2;
   background-image: url("../img/t.png");
   background-repeat: no-repeat;
-  background-color: #81b3d2;
+  background-position: 15px 15px;
 }
+
 .social-btn-2 {
   background-image: url("../img/f.png");
   background-repeat: no-repeat;
   background-color: #81b3d2;
+  background-position: 15px 15px;
 }
+
 .social-btn-3 {
   background-image: url("../img/youtube.png");
   background-repeat: no-repeat;
   background-color: #81b3d2;
+  background-position: 15px 15px;
 }
-.footer-copyright {}
+
+.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.footer-copyright span {
+  display: inline-block;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.footer-copyright a {
+  display: inline-block;
+  height: 39px;
+  width: 113px;
+  background-image: url("../img/copyright.png");
+  background-repeat: no-repeat;
+  background-size: 113px 39px;
+}
+
+
+/*как правильно расставить элементы?*/
+
 
 /*страница каталога с фильтрами*/
 
+
 /*фильтр*/
+
 .catalog-header-bottom {
   padding-top: 14px;
   padding-left: 6%;
   padding-right: 6%;
   margin-bottom: 39px;
   background-image: url("../img/filter_background.jpg");
+  background-position: top;
 }
-.choice-left {
-  float: left;
-}
-.choice-left li {
-  outline: 1px solid black;
-  padding-left: 0;
-  /*паддинг не работает!*/
 
+.form-filter {
+  float: left;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: #ffffff;
+  outline: 1px solid red;
+}
+
+.form-filter legend {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.form-filter ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
-.choice-right {
+
+.filter-range li {
+  display: block;
+}
+
+.filter-range label {
+  padding-left: 45px;
+}
+
+
+/*ползунок*/
+
+.filter-range {
   float: right;
-  /*Вот как его правильно выровнять и задать длину?*/
+  width: 330px;
+  color: #ffffff;
+  border: none;
+}
+
+.filter-range legend {
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  font-size: 0;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  text-transform: uppercase;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price, .price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+
+/*Вот как его правильно выровнять и задать длину?*/
+
+
 }
 
 /*выбор отелей*/
@@ -491,4 +825,14 @@ main {
 }
 .rate {
   float: right;
+}
+.inner-page-footer {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/footer.png");
+  background-repeat: repeat;
+  overflow: hidden;
+  outline: 1px solid black;
 }
