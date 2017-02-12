@@ -19,6 +19,156 @@ body {
   display: table;
 }
 
+.sprite {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-calendar {
+  width: 21px;
+  height: 22px;
+  background-position: -10px -10px;
+}
+
+.sprite-calendar_active {
+  width: 21px;
+  height: 22px;
+  background-position: -10px -52px;
+}
+
+.sprite-calendar_hover {
+  width: 21px;
+  height: 22px;
+  background-position: -10px -94px;
+}
+
+.sprite-checkbox {
+  width: 26px;
+  height: 22px;
+  background-position: -10px -136px;
+}
+
+.sprite-checkbox_active {
+  width: 26px;
+  height: 22px;
+  background-position: -10px -178px;
+}
+
+.sprite-checkbox_hover {
+  width: 26px;
+  height: 22px;
+  background-position: -10px -220px;
+}
+
+.sprite-down {
+  width: 11px;
+  height: 10px;
+  background-position: -10px -262px;
+}
+
+.sprite-down_current {
+  width: 11px;
+  height: 10px;
+  background-position: -10px -292px;
+}
+
+.sprite-down_hover {
+  width: 11px;
+  height: 10px;
+  background-position: -10px -322px;
+}
+
+.sprite-empty_checkbox {
+  width: 22px;
+  height: 22px;
+  background-position: -10px -352px;
+}
+
+.sprite-empty_checkbox_active {
+  width: 22px;
+  height: 22px;
+  background-position: -10px -394px;
+}
+
+.sprite-empty_checkbox_hover {
+  width: 22px;
+  height: 22px;
+  background-position: -10px -436px;
+}
+
+.sprite-f {
+  width: 10px;
+  height: 19px;
+  background-position: -10px -478px;
+}
+
+.sprite-f_active {
+  width: 10px;
+  height: 19px;
+  background-position: -10px -517px;
+}
+
+.sprite-filter1 {
+  width: 22px;
+  height: 22px;
+  background-position: -10px -556px;
+}
+
+.sprite-filter2 {
+  width: 26px;
+  height: 22px;
+  background-position: -10px -598px;
+}
+
+.sprite-stars {
+  width: 42px;
+  height: 17px;
+  background-position: -10px -640px;
+}
+
+.sprite-t {
+  width: 17px;
+  height: 15px;
+  background-position: -10px -677px;
+}
+
+.sprite-t_active {
+  width: 17px;
+  height: 15px;
+  background-position: -10px -712px;
+}
+
+.sprite-up {
+  width: 11px;
+  height: 10px;
+  background-position: -10px -747px;
+}
+
+.sprite-up_active {
+  width: 11px;
+  height: 10px;
+  background-position: -10px -777px;
+}
+
+.sprite-up_hover {
+  width: 11px;
+  height: 10px;
+  background-position: -10px -807px;
+}
+
+.sprite-youtube {
+  width: 20px;
+  height: 16px;
+  background-position: -10px -837px;
+}
+
+.sprite-youtube_active {
+  width: 20px;
+  height: 16px;
+  background-position: -10px -873px;
+}
+
 
 /*шапка с меню*/
 
@@ -26,9 +176,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
-/*чтоза полоска наверху над хедером?*/
 
 .header-top {
   position: relative;
@@ -77,28 +224,45 @@ body {
   text-transform: uppercase;
 }
 
+.main-nav .current {
+  color: #766357;
+}
+
+.main-nav-item a:hover {
+  color: #81b3d2;
+}
+
+.main-nav-item a:active {
+  color: #cccccc;
+}
+
+
+/*стиль при нажатии и при активной странице - какие?*/
+
 .logo {
   position: absolute;
   top: 0;
   left: 44.17%;
 }
 
-
-/*почему логитип странно вверху выглядит? и как опустить вниз тор - с 50 до 67 пикселей как на макете */
-
 .header-bottom {
   padding-top: 76px;
-  padding-bottom: 80px;
   overflow: hidden;
-  background-image: url("../img/headerbottom.png"), url("../img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 70px, 100%;
+  background-size: 100% 800px;
   background-repeat: no-repeat;
-  background-position: bottom center, bottom;
+  background-position: bottom left;
 }
 
-
-/*ак подвинуть фото с горами повыше?*/
+.index-mask {
+  display: block;
+  height: 57px;
+  background-image: url("../img/mask.png");
+  background-position: bottom center;
+  background-size: 100% 57px;
+  background-repeat: no-repeat;
+}
 
 .header-bottom img {
   display: block;
@@ -154,9 +318,17 @@ body {
 
 .feature {
   outline: 1px solid black;
-  flex: 1 1 33%;
+  flex: 1 1 21.33%;
+  padding: 60px 6% 80px;
   position: relative;
   overflow: hidden;
+}
+
+.feature span {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .features-title {
@@ -174,21 +346,23 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
-  text-align: center;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 21px;
+  font-weight: normal;
   text-transform: uppercase;
   color: #333333;
 }
 
 .feature-pictured-left {
   flex-basis: 100%;
-  padding-right: 71.67%;
-  padding-left: 5%;
-  padding-top: 4.17%;
-  padding-bottom: 4.17%;
+  padding-right: 70%;
+  padding-left: 6%;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  overflow: hidden;
   background-color: #81b3d2;
   text-align: center;
+  color: #ffffff;
 }
 
 .feature-pictured-left img {
@@ -199,11 +373,9 @@ body {
   margin: 0 auto;
 }
 
-.feature-pictured-left span {
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
+.feature-pictured-left p, .feature-pictured-left h3, .feature-pictured-left span {
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .feature-desc {
@@ -224,32 +396,17 @@ body {
   background-repeat: no-repeat;
 }
 
-.feature.icon-house p {
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
-
-/*как цетровку сделать параграфов? везде отступы разные*/
-
-.feature.icon-burger p {
-  padding-left: 55px;
-  padding-right: 55px;
-}
-
-.feature.icon-souvenirs p {
-  padding-left: 65px;
-  padding-right: 65px;
-}
-
 .feature-pictured-right {
   flex-basis: 100%;
-  padding-left: 71.67%;
-  padding-right: 5%;
+  padding-left: 68%;
+  padding-right: 4.17%;
+  /* не получается вставить строчку как надо*/
   padding-top: 45px;
   padding-bottom: 60px;
   text-align: center;
+  overflow: hidden;
   background-color: #81b3d2;
+  color: #ffffff;
 }
 
 .feature-pictured-right img {
@@ -260,11 +417,9 @@ body {
   margin: 0 auto;
 }
 
-.feature-pictured-right span {
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
+.feature-pictured-right h3, .feature-pictured-right p, .feature-pictured-right span {
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .feature-preference {
@@ -275,24 +430,9 @@ body {
   text-align: center;
 }
 
-.feature-preference p {
-  padding-left: 70px;
-  padding-right: 70px;
-  ;
-}
-
-
-/*надо проставить паддинги-маргины у нижних фич*/
-
 .feature-preference span {
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
   color: #333333;
 }
-
-
-/*сделать центровку текста в блоках?*/
 
 
 /*текст перед всплывающим окном*/
@@ -394,7 +534,6 @@ body {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
-  outline: 1px solid black;
   color: #000000;
 }
 
@@ -408,26 +547,70 @@ body {
   padding-left: 0;
 }
 
-.inner-field input {
+.feedback-form-inner input {
   height: 38px;
-  align-self: flex-end;
-  width: 346px;
   border: none;
   background-color: #f2f2f2;
-  /*как подвинуть к правому краю*??*/
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
 }
 
-.inner-field button {
+.feedback-form-inner input:hover {
+  background-color: #ebebeb;
+}
+
+.feedback-form-inner input:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.inner-field input {
+  align-self: flex-end;
+  width: 346px;
+}
+
+.inner-field .calendar {
   align-self: middle;
   display: block;
   position: absolute;
-  left: 93%;
   width: 21px;
   height: 22px;
   border: none;
   background-color: #f2f2f2;
-  background-image: url("../img/calendar.png");
-  background-size: auto;
+  background-image: url("../img/sprite.png");
+  width: 21px;
+  height: 22px;
+  background-position: -10px -10px;
+  top: 8px;
+  left: 93%;
+}
+
+.inner-field .calendar:hover {
+  display: block;
+  position: absolute;
+  width: 21px;
+  height: 22px;
+  background-position: -10px -94px;
+  top: 8px;
+  left: 93%;
+  border: none;
+  background-image: url("../img/sprite.png");
+}
+
+.inner-field .calendar:active {
+  display: block;
+  position: absolute;
+  width: 21px;
+  height: 22px;
+  background-position: -10px -52px;
+  left: 93%;
+  top: 8px;
+  background-image: url("../img/sprite.png");
+  outline: none;
 }
 
 .feedback-form-inner label {
@@ -453,16 +636,12 @@ body {
 }
 
 .inner-left input, .inner-right input {
-  height: 38px;
   flex-basis: 1 1 100%;
 }
 
 .inner-left label, .inner-right label {
   padding-right: 41px;
 }
-
-
-/*как все в одну строку поместить?*/
 
 .inner-right {
   display: flex;
@@ -481,22 +660,41 @@ body {
 
 .counter button, .counter input {
   display: inline-block;
+  vertical-align: middle;
   padding: 0;
   margin: 0;
   border: 0;
   text-align: center;
   width: 38px;
   height: 38px;
-  background-color: #f2f2f2;
+  font-weight: bold;
+  line-height: normal;
   font-size: 14px;
 }
+
+.counter .inner-btn {
+  background-color: #f2f2f2;
+  color: #a9a9a9;
+}
+
+.counter .inner-btn:hover {
+  color: #000000;
+  outline: none;
+}
+
+.counter .inner-btn:active {
+  color: #81b3d2;
+  outline: none;
+}
+
+
+/*как плейсхолдеру поставить 2 черным цветом?*/
 
 .modal-content .btn {
   display: block;
   width: 100%;
   min-height: 58px;
   margin-left: auto;
-  ;
   margin-right: auto;
   border: none;
   box-sizing: border-box;
@@ -507,6 +705,18 @@ body {
   line-height: 26px;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.modal-content .btn:hover {
+  background-color: #669ec0;
+  color: #d6e5ee;
+  outline: none;
+}
+
+.modal-content .btn:active {
+  background-color: #5496bd;
+  color: #88b6d1;
+  outline: none;
 }
 
 .index-map {
@@ -571,29 +781,111 @@ body {
   height: 48px;
 }
 
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.social-btn:active {
+  background-color: #5496bd;
+}
+
 .social-btn-1 {
   background-color: #81b3d2;
-  background-image: url("../img/t.png");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-size: 17px 15px;
+  position: relative;
   align-self: center;
 }
 
-.social-btn-2 {
-  background-image: url("../img/f.png");
+.social-btn-1::before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 15px;
+  background-position: -10px -677px;
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-btn-1:active::before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 15px;
+  background-position: -10px -712px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-btn-2 {
+  position: relative;
   background-color: #81b3d2;
-  background-position: 50% 50%;
+  background-size: 10px 19px;
   align-self: center;
+}
+
+.social-btn-2::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/sprite.png");
+  width: 10px;
+  height: 19px;
+  background-position: -10px -478px;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-btn-2:active::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/sprite.png");
+  width: 10px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-position: -10px -517px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .social-btn-3 {
   margin-right: 0;
-  background-image: url("../img/youtube.png");
-  background-repeat: no-repeat;
+  position: relative;
   background-color: #81b3d2;
-  background-position: 50% 50%;
   align-self: center;
+}
+
+.social-btn-3::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  width: 20px;
+  height: 16px;
+  background-position: -10px -837px;
+}
+
+.social-btn-3:active::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  width: 20px;
+  height: 16px;
+  background-position: -10px -873px;
+  background-repeat: no-repeat;
 }
 
 .footer-copyright {
@@ -623,8 +915,17 @@ body {
   background-size: 113px 39px;
 }
 
+.footer-copyright a:hover {
+  background-image: url("../img/copyright_hover.png");
+  background-repeat: no-repeat;
+  background-size: 113px 39px;
+}
 
-/*как правильно расставить элементы?*/
+.footer-copyright a:active {
+  background-image: url("../img/copyright_active.png");
+  background-repeat: no-repeat;
+  background-size: 113px 39px;
+}
 
 
 /*страница каталога с фильтрами*/
@@ -636,18 +937,27 @@ body {
   padding-top: 14px;
   padding-left: 6%;
   padding-right: 6%;
-  margin-bottom: 39px;
+  padding-bottom: 20px;
+  overflow: hidden;
   background-image: url("../img/filter_background.jpg");
-  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 800px;
+  background-position: 50% 50%;
+  /*как позиционировать картинку?*/
 }
 
 .form-filter {
   float: left;
   padding: 0;
   margin: 0;
+  padding-right: 100px;
   border: none;
   color: #ffffff;
   outline: 1px solid red;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .form-filter legend {
@@ -658,26 +968,94 @@ body {
   line-height: 21px;
   text-transform: uppercase;
   font-weight: bold;
+  color: #ffffff;
 }
 
-.form-filter ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.form-filter input[type="checkbox"] {
+  display: none;
 }
 
-.filter-range li {
+.form-filter input[type="checkbox"]+label {
   display: block;
+  outline: 2px solid black;
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
 }
 
-.filter-range label {
-  padding-left: 45px;
+.form-filter input[type="checkbox"]+label::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/empty_checkbox.png");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  top: 15px;
+  left: 0;
+}
+
+.form-filter input[type="checkbox"]+label:hover::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/empty_checkbox_hover.png");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  top: 15px;
+  left: 0;
+}
+
+.form-filter input[type="checkbox"]+label:active::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/empty_checkbox_active.png");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  top: 15px;
+  left: 0;
+}
+
+.form-filter input[type="checkbox"]:checked+label::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  top: 15px;
+  left: 0;
+}
+
+.form-filter input[type="checkbox"]:checked+label:hover::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox_hover.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  top: 15px;
+  left: 0;
+}
+
+.form-filter input[type="checkbox"]:checked+label:active::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox_active.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  top: 15px;
+  left: 0;
 }
 
 
 /*ползунок*/
 
 .filter-range {
+  padding: 0;
+  margin: 0;
   float: right;
   width: 330px;
   color: #ffffff;
@@ -805,48 +1183,260 @@ main {
   padding-right: 6%;
 }
 .hotels {
-  display: block;
-  outline: 1px solid black;
+  display: flex;
+  padding-left: 6%;
+  padding-right: 6%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #ffffff;
+}
+.sort-hotels {
+  padding-top: 30px;
+  padding-bottom: 37px;
+  outline: 1px solid #cccccc;
 }
 .sort-choice {
   float: left;
-  padding-left: 0;
-  outline: 1px solid black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 .sort-choice li {
-  display: inline-block;
+  align-self: baseline;
+  flex-basis: 1 1 100%;
   outline: 1px solid black;
-  vertical-align: center;
 }
+.sort-choice span {
+  padding-right: 50px;
+  font-family: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000000;
+}
+.sort-choice b {
+  padding-right: 38px;
+  color: #000000;
+}
+.sort-choice a {
+  padding-right: 33px;
+  color: #cccccc;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #81b3d2;
+}
+.sort-choice a:hover {
+  color: #81b3d2;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #81b3d2;
+}
+.sort-choice a:active {
+  color: #000000;
+  text-decoration: none;
+}
+.sort-choice .sort-choice-current {
+  color: #81b3d2;
+  text-decoration: none;
+}
+
+/*стредочки вверх-вниз*/
 .sort-control {
   float: right;
-  display: inline-block;
+  font-size: 0;
   outline: 1px solid black;
 }
-.control-up {
+.sort-control .control {
+  display: inline-block;
+  vertical-align: middle;
+  width: 11px;
+  height: 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.sort-control .control-up {
+  padding-right: 12px;
   background-image: url("../img/up.png");
+  background-size: 11px 10px;
   background-repeat: no-repeat;
+  background-position: 0 50%;
 }
-.control-down {
+.sort-control .control-up:hover {
+  background-image: url("../img/up_hover.png");
+  background-size: 11px 10px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.sort-control .control-up:active {
+  background-image: url("../img/up_active.png");
+  background-size: 11px 10px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.sort-control .control-down {
   background-image: url("../img/down.png");
+  background-size: 11px 10px;
   background-repeat: no-repeat;
+  background-position: 0 50%;
 }
+.sort-control .control-down:hover {
+  background-image: url("../img/down_hover.png");
+  background-size: 11px 10px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.sort-control .control-down:active {
+  background-image: url("../img/down_current.png");
+  background-size: 11px 10px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.sort-control .control-current {
+  background-image: url("../img/down_current.png");
+  background-size: 11px 10px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+/*список отелей*/
 .items-left {
-  float: left;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: inherit;
+  text-transform: uppercase;
 }
 .items-left img {
-  display: inline-block;
+  float: left;
   margin-right: 30px;
 }
 .items-desc {
+  float: left;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.items-desc h3 {
+  padding: 0;
+  margin: 0;
+}
+.items-desc .hotels-title {
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+.items-desc .hotels-title:hover {
+  color: #89b8d5;
+}
+.items-desc .hotels-title:active {
+  color: #b2b2b2;
+}
+.items-desc .hotels-type {
   display: inline-block;
+  vertical-align: top;
+  padding-bottom: 5px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #766357;
+  font-weight: normal;
+}
+.hotels-type .type {
+  margin-right: 60px;
+}
+.items-desc .items-order {
+  display: block;
+  font-size: 0;
+}
+.items-order .hotels-btn {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 17px;
+  padding-left: 17px;
+  margin-right: 6px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+.items-order .bnt-about {
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+.items-order .bnt-about:hover {
+  background-color: #669ec0;
+  color: #ffffff;
+}
+.items-order .bnt-about:active {
+  background-color: #5496bd;
+  color: #88b6d1;
+}
+.items-order .btn-book {
+  background-color: #766357;
+  color: #ffffff;
+}
+.items-order .btn-book:hover {
+  background-color: #604e43;
+  color: #ffffff;
+}
+.items-order .btn-book:active {
+  background-color: #503e33;
+  color: #857871;
 }
 .rate {
   float: right;
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  font-family: inherit;
+  font-weight: normal;
+}
+.rate .stars {
+  display: block;
+  width: 42px;
+  height: 17px;
+  margin-bottom: 45px;
+  background-image: url("../img/stars.png");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+.rate .stars-4 {
+  width: 90px;
+  height: 17px;
+}
+.rate .stars-3 {
+  width: 65px;
+  height: 17px;
+}
+.rate .rating {
+  width: 110px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #666666;
+  background-color: #f2f2f2;
 }
 .inner-page-footer {
+  position: static;
   display: flex;
   flex-flow: row;
   justify-content: center;
