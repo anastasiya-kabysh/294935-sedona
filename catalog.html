@@ -11,18 +11,18 @@
 
   <body>
     <div class="wrapper">
-      <header class="main-header">
+      <header class="main-header header-catalog">
         <div class="header-top clearfix">
           <nav>
             <ul class="main-nav">
               <li class="main-nav-item"><a href="#">Информация</a></li>
+              <li class="main-nav-item"><a class="current">Гостиницы</a></li>
               <li class="main-nav-item"><a href="#">Фото и видео</a></li>
               <li class="main-nav-item"><a href="#">Карта штата</a></li>
-              <li class="main-nav-item"><a href="" class="current">Гостиницы</a></li>
             </ul>
           </nav>
           <div class="logo">
-            <a href="#"><img src="img/grouplogo.png" width="138" height="70" alt="Логотип Седона"></a>
+            <a href="index.html"><img src="img/grouplogo.png" width="138" height="70" alt="Логотип Седона"></a>
           </div>
         </div>
         <div class="catalog-header-bottom clearfix">
@@ -49,18 +49,19 @@
             </fieldset>
             <fieldset class="filter-range">
               <legend>Стоимость в сутки</legend>
-              <div class="price-controls">
-                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              <div class="filter-controls">
+                <div class="price-controls">
+                  <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                  <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
 
-              </div>
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar"></div>
                 </div>
-                <div class="range-toggle range-toggle-min"></div>
-                <div class="range-toggle range-toggle-max"></div>
-
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                </div>
               </div>
               <button class="btn-transparent" type="submit">Показать</button>
             </fieldset>
@@ -72,7 +73,7 @@
           <div class="sort-hotels clearfix">
             <ul class="sort-choice">
               <li>
-                <span>Найдено&colon;&ensp;3</span></li>
+                <span>Найдено&colon;3</span></li>
               <li><b>сортировка&colon;</b></li>
               <li><a class="sort-choice-current">по цене</a></li>
               <li><a href="#">по типу</a></li>
@@ -88,7 +89,7 @@
           <div class="items-left clearfix">
             <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort &amp; spa">
             <div class="items-desc">
-              <h3><a href="#" class="hotels-title">Amara resort &amp;</a></h3>
+              <h3><a href="#" class="hotels-title">Amara resort &amp; spa</a></h3>
               <div class="hotels-type">
                 <span class="type">Гостиница</span>
                 <span class="price">от 4000 р.</span>
@@ -147,7 +148,7 @@
       </main>
       <footer class="main-footer inner-page-footer">
         <section class="footer footer-contacts">
-          <span><a href="#"><h3>#VisitSedona</h3></a></span>
+          <span><a href="#">#VisitSedona</a></span>
         </section>
         <section class="footer footer-social">
           <a class="social-btn social-btn-1" href="#"></a>

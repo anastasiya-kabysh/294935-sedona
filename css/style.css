@@ -217,7 +217,7 @@ body {
 
 .main-nav-item a {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 26px;
   font-weight: 700;
   text-decoration: none;
   color: #000000;
@@ -250,8 +250,7 @@ body {
   overflow: hidden;
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 800px;
-  background-repeat: no-repeat;
+  background-size: 100% 789px background-repeat: no-repeat;
   background-position: bottom left;
 }
 
@@ -268,11 +267,12 @@ body {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 20px;
 }
 
 .subject {
-  padding-top: 61px;
-  padding-bottom: 56px;
+  padding-top: 63px;
+  padding-bottom: 46px;
   background-color: #ffffff;
   background-image: url("../img/subject.png");
   background-repeat: repeat;
@@ -313,30 +313,20 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  outline: 1px solid black;
 }
 
 .feature {
-  outline: 1px solid black;
   flex: 1 1 21.33%;
   padding: 60px 6% 80px;
   position: relative;
   overflow: hidden;
 }
 
-.feature span {
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
 .features-title {
   padding: 0;
   margin: 0;
-  margin-bottom: 25px;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 23px;
   text-transform: uppercase;
   font-weight: 700;
   color: #000000;
@@ -345,7 +335,6 @@ body {
 .description {
   padding: 0;
   margin: 0;
-  text-align: center;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -357,8 +346,11 @@ body {
   flex-basis: 100%;
   padding-right: 70%;
   padding-left: 6%;
-  padding-top: 45px;
-  padding-bottom: 60px;
+  padding-top: 55px;
+  padding-bottom: 53px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
   overflow: hidden;
   background-color: #81b3d2;
   text-align: center;
@@ -373,7 +365,25 @@ body {
   margin: 0 auto;
 }
 
-.feature-pictured-left p, .feature-pictured-left h3, .feature-pictured-left span {
+.feature-pictured-left .features-title {
+  padding-left: 50px;
+  padding-right: 85px;
+  margin-bottom: 23px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.feature-pictured-left span {
+  display: block;
+  margin-bottom: 20px;
+  padding-right: 36px;
+  font-weight: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.feature-pictured-left p {
+  padding-right: 36px;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -381,18 +391,42 @@ body {
 .feature-desc {
   width: 33.33%;
   padding-top: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 85px;
   background-color: #ffffff;
   text-align: center;
+}
+
+.feature-desc .features-title {
+  margin-bottom: 22px;
 }
 
 .feature.icon-house::before, .feature.icon-burger::before, .feature.icon-souvenirs::before {
   content: "";
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   width: 75px;
   height: 75px;
   background-image: url("../img/hause.png");
+  background-repeat: no-repeat;
+}
+
+.feature.icon-burger::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 22px;
+  width: 75px;
+  height: 75px;
+  background-image: url("../img/burger.png");
+  background-repeat: no-repeat;
+}
+
+.feature.icon-souvenirs::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 22px;
+  width: 75px;
+  height: 75px;
+  background-image: url("../img/souvenirs.png");
   background-repeat: no-repeat;
 }
 
@@ -400,13 +434,27 @@ body {
   flex-basis: 100%;
   padding-left: 68%;
   padding-right: 4.17%;
-  /* не получается вставить строчку как надо*/
-  padding-top: 45px;
-  padding-bottom: 60px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+  font-weight: normal;
   text-align: center;
   overflow: hidden;
   background-color: #81b3d2;
   color: #ffffff;
+}
+
+.feature-pictured-right .features-title {
+  font-size: 21px;
+  line-height: 23px;
+  margin: 0;
+  margin-bottom: 23px;
+  color: #ffffff;
+  white-space: pre-line;
 }
 
 .feature-pictured-right img {
@@ -417,9 +465,15 @@ body {
   margin: 0 auto;
 }
 
-.feature-pictured-right h3, .feature-pictured-right p, .feature-pictured-right span {
+.feature-pictured-right span {
+  display: block;
+  margin-bottom: 25px;
+  font-weight: normal;
   color: #ffffff;
-  text-transform: uppercase;
+}
+
+.feature-pictured-right p {
+  color: #ffffff;
 }
 
 .feature-preference {
@@ -430,16 +484,22 @@ body {
   text-align: center;
 }
 
-.feature-preference span {
-  color: #333333;
+.feature-preference .features-title {
+  margin-bottom: 20px;
+  white-space: pre-line;
 }
 
-
-/*текст перед всплывающим окном*/
+.feature-preference span {
+  display: block;
+  margin-bottom: 25px;
+  font-weight: normal;
+  color: #333333;
+  font-weight: normal;
+}
 
 .feedback {
   display: block;
-  padding-top: 57px;
+  padding-top: 48px;
   background-color: #ffffff;
   color: #000000;
 }
@@ -449,14 +509,11 @@ body {
   background-color: #ffffff;
 }
 
-
-/*неизвестен размер шрифта в Заинтересовались?*/
-
 .feedback-description h2 {
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
-  font-size: 24px;
+  margin-bottom: 26px;
+  font-size: 30px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -473,6 +530,7 @@ body {
   line-height: 26px;
   text-transform: uppercase;
   color: #333333;
+  font-weight: normal;
 }
 
 
@@ -497,7 +555,7 @@ body {
   background-color: #766357;
   color: #ffffff;
   font-family: "PT Sans", Helvetica, sans-serif;
-  font-size: 21px;
+  font-size: 25px;
   line-height: 26px;
   text-transform: uppercase;
   font-weight: bold;
@@ -515,7 +573,10 @@ body {
 }
 
 .feedback-form {
-  padding: 55px;
+  padding-right: 55px;
+  padding-left: 55px;
+  padding-top: 50px;
+  padding-bottom: 55px;
   position: absolute;
   top: 86px;
   left: 50%;
@@ -533,7 +594,7 @@ body {
   margin: 0;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   color: #000000;
 }
 
@@ -587,6 +648,7 @@ body {
   background-position: -10px -10px;
   top: 8px;
   left: 93%;
+  outline: none;
 }
 
 .inner-field .calendar:hover {
@@ -597,7 +659,7 @@ body {
   background-position: -10px -94px;
   top: 8px;
   left: 93%;
-  border: none;
+  outline: none;
   background-image: url("../img/sprite.png");
 }
 
@@ -639,10 +701,6 @@ body {
   flex-basis: 1 1 100%;
 }
 
-.inner-left label, .inner-right label {
-  padding-right: 41px;
-}
-
 .inner-right {
   display: flex;
   flex-flow: row nowrap;
@@ -652,6 +710,14 @@ body {
   margin: 0;
   margin-bottom: 54px;
   max-width: 50%;
+}
+
+.inner-left label {
+  padding-right: 47px;
+}
+
+.inner-right label {
+  padding-right: 30px;
 }
 
 .feedback-form-inner .counter {
@@ -670,6 +736,23 @@ body {
   font-weight: bold;
   line-height: normal;
   font-size: 14px;
+  outline: none;
+}
+
+.counter input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.counter input::-moz-placeholder {
+  color: #000000;
+}
+
+.counter input:-moz-placeholder {
+  color: #ffffff;
+}
+
+.counter input:-ms-input-placeholder {
+  color: #ffffff;
 }
 
 .counter .inner-btn {
@@ -686,9 +769,6 @@ body {
   color: #81b3d2;
   outline: none;
 }
-
-
-/*как плейсхолдеру поставить 2 черным цветом?*/
 
 .modal-content .btn {
   display: block;
@@ -729,7 +809,7 @@ body {
 
 /*футер*/
 
-.main-footer {
+.main-footer.footer-absolute {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -737,11 +817,20 @@ body {
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/footer.png");
-  background-repeat: repeat;
+  background-color: #fefefe;
   opacity: rgba(0, 0, 0, 0.9);
   overflow: hidden;
-  outline: 1px solid black;
+}
+
+.main-footer {
+  position: static;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefefe;
+  opacity: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
 }
 
 .footer {
@@ -750,9 +839,9 @@ body {
 }
 
 .footer-contacts {
-  margin-top: 36px;
-  margin-bottom: 36px;
-  font-size: 21px;
+  margin-top: 12px;
+  margin-bottom: 23px;
+  padding-left: 23px font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
 }
@@ -763,13 +852,12 @@ body {
 }
 
 .footer-social {
-  margin-top: 36px;
-  margin-bottom: 36px;
-  outline: 1px solid black;
+  margin-top: 38px;
+  margin-bottom: 40px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  outline: 1px solid black;
+  padding-left: 34px;
 }
 
 .social-btn {
@@ -893,7 +981,7 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-content: center;
-  margin-top: 36px;
+  margin-top: 30px;
   margin-bottom: 36px;
   font-size: 14px;
   line-height: 26px;
@@ -907,10 +995,10 @@ body {
 }
 
 .footer-copyright a {
-  align-self: center;
-  height: 39px;
-  width: 113px;
-  background-image: url("../img/copyright.png");
+  align-self: flex-start;
+  height: 40px;
+  width: 107px;
+  background-image: url(../img/copyright.png);
   background-repeat: no-repeat;
   background-size: 113px 39px;
 }
@@ -934,7 +1022,7 @@ body {
 /*фильтр*/
 
 .catalog-header-bottom {
-  padding-top: 14px;
+  padding-top: 27px;
   padding-left: 6%;
   padding-right: 6%;
   padding-bottom: 20px;
@@ -950,20 +1038,23 @@ body {
   float: left;
   padding: 0;
   margin: 0;
-  padding-right: 100px;
+  padding-right: 120px;
   border: none;
   color: #ffffff;
-  outline: 1px solid red;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   font-weight: normal;
 }
 
+.form-filter.filter-type {
+  margin-right: 20%;
+}
+
 .form-filter legend {
   padding: 0;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
@@ -977,10 +1068,9 @@ body {
 
 .form-filter input[type="checkbox"]+label {
   display: block;
-  outline: 2px solid black;
   padding-left: 40px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 16px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -1054,52 +1144,56 @@ body {
 /*ползунок*/
 
 .filter-range {
+  width: 30.8%;
   padding: 0;
-  margin: 0;
-  float: right;
-  width: 330px;
-  color: #ffffff;
+  padding-left: 10px;
+  padding-left: 10px;
+  text-transform: uppercase;
   border: none;
+  color: #ffffff;
+}
+
+.filter-controls {
+  padding-left: 10px;
 }
 
 .filter-range legend {
+  margin-bottom: 10px;
+  font-weight: 600;
   font-size: 16px;
   line-height: 21px;
-  text-transform: uppercase;
-  font-weight: 600;
 }
 
 .price-controls {
   position: relative;
   height: 36px;
   margin-bottom: 20px;
+  font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
-  font-size: 0;
 }
 
 .price-controls::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 52%;
   width: 2px;
   height: 22px;
   background: #ffffff;
+  transform: translate(-50%, -50%);
 }
 
 .price-controls label {
   display: inline-block;
   font-size: 14px;
   line-height: 38px;
-  text-transform: uppercase;
   vertical-align: top;
   cursor: pointer;
 }
 
 .price-controls .min-price, .price-controls .max-price {
-  width: 90px;
+  width: 25.5%;
   padding-left: 65px;
 }
 
@@ -1140,6 +1234,10 @@ body {
   cursor: pointer;
 }
 
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
 .range-toggle-min {
   left: 0;
 }
@@ -1148,14 +1246,12 @@ body {
   left: 80%;
 }
 
-.range-toggle:hover {
-  background: #1c4f80;
-}
-
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  margin-left: 95px;
+  margin-right: 4px;
+  padding: 6px 30px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -1166,22 +1262,15 @@ body {
   cursor: pointer;
 }
 
+
+}
 .btn-transparent:hover {
   color: #000000;
   background: #ffffff;
-}
-
-
-/*Вот как его правильно выровнять и задать длину?*/
-
-
+  /*Вот как его правильно выровнять и задать длину?*/
 }
 
 /*выбор отелей*/
-main {
-  padding-left: 6%;
-  padding-right: 6%;
-}
 .hotels {
   display: flex;
   padding-left: 6%;
@@ -1194,7 +1283,6 @@ main {
 .sort-hotels {
   padding-top: 30px;
   padding-bottom: 37px;
-  outline: 1px solid #cccccc;
 }
 .sort-choice {
   float: left;
@@ -1203,6 +1291,7 @@ main {
   justify-content: flex-start;
   padding: 0;
   margin: 0;
+  list-style: none;
   font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1210,7 +1299,6 @@ main {
 .sort-choice li {
   align-self: baseline;
   flex-basis: 1 1 100%;
-  outline: 1px solid black;
 }
 .sort-choice span {
   padding-right: 50px;
@@ -1222,11 +1310,11 @@ main {
   color: #000000;
 }
 .sort-choice b {
-  padding-right: 38px;
+  padding-right: 40px;
   color: #000000;
 }
 .sort-choice a {
-  padding-right: 33px;
+  padding-right: 34px;
   color: #cccccc;
   text-decoration: underline;
   text-decoration-style: dotted;
@@ -1251,7 +1339,6 @@ main {
 .sort-control {
   float: right;
   font-size: 0;
-  outline: 1px solid black;
 }
 .sort-control .control {
   display: inline-block;
@@ -1266,48 +1353,48 @@ main {
   background-image: url("../img/up.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: -2px 10px
 }
 .sort-control .control-up:hover {
   background-image: url("../img/up_hover.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: -2px 10px
 }
 .sort-control .control-up:active {
   background-image: url("../img/up_active.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: -2px 10px
 }
 .sort-control .control-down {
   background-image: url("../img/down.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: -2px 10px
 }
 .sort-control .control-down:hover {
   background-image: url("../img/down_hover.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: -2px 10px
 }
 .sort-control .control-down:active {
   background-image: url("../img/down_current.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: -2px 10px
 }
 .sort-control .control-current {
   background-image: url("../img/down_current.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: -2px 10px
 }
 
 /*список отелей*/
 .items-left {
-  padding-top: 30px;
+  padding-top: 25px;
   padding-bottom: 30px;
   font-size: 14px;
   line-height: 21px;
@@ -1323,6 +1410,8 @@ main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
 }
 .items-desc h3 {
   padding: 0;
@@ -1332,7 +1421,7 @@ main {
   display: block;
   padding: 0;
   margin: 0;
-  padding-bottom: 5px;
+  margin-bottom: 5px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -1346,16 +1435,17 @@ main {
   color: #b2b2b2;
 }
 .items-desc .hotels-type {
-  display: inline-block;
-  vertical-align: top;
-  padding-bottom: 5px;
+  margin-bottom: 13px;
+  align-self: flex-start;
   font-size: 14px;
   line-height: 21px;
   color: #766357;
   font-weight: normal;
 }
 .hotels-type .type {
-  margin-right: 60px;
+  width: 105px;
+  display: inline-block;
+  margin-right: 6px;
 }
 .items-desc .items-order {
   display: block;
@@ -1416,9 +1506,10 @@ main {
   width: 42px;
   height: 17px;
   margin-bottom: 45px;
-  background-image: url("../img/stars.png");
-  background-position: 0 0;
-  background-repeat: repeat;
+  background-image: url("../img/star.png");
+  background-position: -1px 0;
+  background-repeat: repeat-x;
+  background-size: 23px 17px;
 }
 .rate .stars-4 {
   width: 90px;
@@ -1444,5 +1535,4 @@ main {
   background-image: url("../img/footer.png");
   background-repeat: repeat;
   overflow: hidden;
-  outline: 1px solid black;
 }
