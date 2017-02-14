@@ -250,7 +250,8 @@ body {
   overflow: hidden;
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 789px background-repeat: no-repeat;
+  background-size: 100% 789px;
+  background-repeat: no-repeat;
   background-position: bottom left;
 }
 
@@ -478,7 +479,7 @@ body {
 
 .feature-preference {
   width: 33.33%;
-  padding-top: 50px;
+  padding-top: 45px;
   padding-bottom: 60px;
   background-color: #eeeeee;
   text-align: center;
@@ -635,7 +636,6 @@ body {
 }
 
 .inner-field .calendar {
-  align-self: middle;
   display: block;
   position: absolute;
   width: 21px;
@@ -676,7 +676,6 @@ body {
 }
 
 .feedback-form-inner label {
-  align-self: middle;
   color: #000000;
   font-family: "PT Sans", Helvetica, sans-serif;
   font-weight: bold;
@@ -695,10 +694,6 @@ body {
   margin: 0;
   max-width: 50%;
   margin-bottom: 54px;
-}
-
-.inner-left input, .inner-right input {
-  flex-basis: 1 1 100%;
 }
 
 .inner-right {
@@ -818,7 +813,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fefefe;
-  opacity: rgba(0, 0, 0, 0.9);
+  opacity: 0.9;
   overflow: hidden;
 }
 
@@ -829,19 +824,18 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fefefe;
-  opacity: rgba(0, 0, 0, 0.9);
   overflow: hidden;
 }
 
 .footer {
-  flex-basis: 1 1 33.33%;
   margin: auto;
 }
 
 .footer-contacts {
   margin-top: 12px;
   margin-bottom: 23px;
-  padding-left: 23px font-size: 21px;
+  padding-left: 23px;
+  font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
 }
@@ -1262,15 +1256,15 @@ body {
   cursor: pointer;
 }
 
-
-}
 .btn-transparent:hover {
   color: #000000;
   background: #ffffff;
   /*Вот как его правильно выровнять и задать длину?*/
 }
 
+
 /*выбор отелей*/
+
 .hotels {
   display: flex;
   padding-left: 6%;
@@ -1280,10 +1274,12 @@ body {
   align-items: stretch;
   background-color: #ffffff;
 }
+
 .sort-hotels {
   padding-top: 30px;
   padding-bottom: 37px;
 }
+
 .sort-choice {
   float: left;
   display: flex;
@@ -1296,10 +1292,11 @@ body {
   line-height: 18px;
   text-transform: uppercase;
 }
+
 .sort-choice li {
   align-self: baseline;
-  flex-basis: 1 1 100%;
 }
+
 .sort-choice span {
   padding-right: 50px;
   font-family: inherit;
@@ -1309,10 +1306,12 @@ body {
   font-weight: bold;
   color: #000000;
 }
+
 .sort-choice b {
   padding-right: 40px;
   color: #000000;
 }
+
 .sort-choice a {
   padding-right: 34px;
   color: #cccccc;
@@ -1320,26 +1319,32 @@ body {
   text-decoration-style: dotted;
   text-decoration-color: #81b3d2;
 }
+
 .sort-choice a:hover {
   color: #81b3d2;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: #81b3d2;
 }
+
 .sort-choice a:active {
   color: #000000;
   text-decoration: none;
 }
+
 .sort-choice .sort-choice-current {
   color: #81b3d2;
   text-decoration: none;
 }
 
+
 /*стредочки вверх-вниз*/
+
 .sort-control {
   float: right;
   font-size: 0;
 }
+
 .sort-control .control {
   display: inline-block;
   vertical-align: middle;
@@ -1348,6 +1353,7 @@ body {
   font-size: 12px;
   line-height: 18px;
 }
+
 .sort-control .control-up {
   padding-right: 12px;
   background-image: url("../img/up.png");
@@ -1355,36 +1361,42 @@ body {
   background-repeat: no-repeat;
   background-position: -2px 10px
 }
+
 .sort-control .control-up:hover {
   background-image: url("../img/up_hover.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
   background-position: -2px 10px
 }
+
 .sort-control .control-up:active {
   background-image: url("../img/up_active.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
   background-position: -2px 10px
 }
+
 .sort-control .control-down {
   background-image: url("../img/down.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
   background-position: -2px 10px
 }
+
 .sort-control .control-down:hover {
   background-image: url("../img/down_hover.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
   background-position: -2px 10px
 }
+
 .sort-control .control-down:active {
   background-image: url("../img/down_current.png");
   background-size: 11px 10px;
   background-repeat: no-repeat;
   background-position: -2px 10px
 }
+
 .sort-control .control-current {
   background-image: url("../img/down_current.png");
   background-size: 11px 10px;
@@ -1392,7 +1404,9 @@ body {
   background-position: -2px 10px
 }
 
+
 /*список отелей*/
+
 .items-left {
   padding-top: 25px;
   padding-bottom: 30px;
@@ -1401,10 +1415,12 @@ body {
   font-family: inherit;
   text-transform: uppercase;
 }
+
 .items-left img {
   float: left;
   margin-right: 30px;
 }
+
 .items-desc {
   float: left;
   display: flex;
@@ -1413,10 +1429,12 @@ body {
   align-items: flex-start;
   align-content: space-between;
 }
+
 .items-desc h3 {
   padding: 0;
   margin: 0;
 }
+
 .items-desc .hotels-title {
   display: block;
   padding: 0;
@@ -1428,12 +1446,15 @@ body {
   text-decoration: none;
   color: #000000;
 }
+
 .items-desc .hotels-title:hover {
   color: #89b8d5;
 }
+
 .items-desc .hotels-title:active {
   color: #b2b2b2;
 }
+
 .items-desc .hotels-type {
   margin-bottom: 13px;
   align-self: flex-start;
@@ -1442,15 +1463,18 @@ body {
   color: #766357;
   font-weight: normal;
 }
+
 .hotels-type .type {
   width: 105px;
   display: inline-block;
   margin-right: 6px;
 }
+
 .items-desc .items-order {
   display: block;
   font-size: 0;
 }
+
 .items-order .hotels-btn {
   display: inline-block;
   vertical-align: top;
@@ -1465,30 +1489,37 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
+
 .items-order .bnt-about {
   background-color: #81b3d2;
   color: #ffffff;
 }
+
 .items-order .bnt-about:hover {
   background-color: #669ec0;
   color: #ffffff;
 }
+
 .items-order .bnt-about:active {
   background-color: #5496bd;
   color: #88b6d1;
 }
+
 .items-order .btn-book {
   background-color: #766357;
   color: #ffffff;
 }
+
 .items-order .btn-book:hover {
   background-color: #604e43;
   color: #ffffff;
 }
+
 .items-order .btn-book:active {
   background-color: #503e33;
   color: #857871;
 }
+
 .rate {
   float: right;
   display: flex;
@@ -1501,6 +1532,7 @@ body {
   font-family: inherit;
   font-weight: normal;
 }
+
 .rate .stars {
   display: block;
   width: 42px;
@@ -1511,14 +1543,17 @@ body {
   background-repeat: repeat-x;
   background-size: 23px 17px;
 }
+
 .rate .stars-4 {
   width: 90px;
   height: 17px;
 }
+
 .rate .stars-3 {
   width: 65px;
   height: 17px;
 }
+
 .rate .rating {
   width: 110px;
   padding-top: 5px;
@@ -1526,6 +1561,7 @@ body {
   color: #666666;
   background-color: #f2f2f2;
 }
+
 .inner-page-footer {
   position: static;
   display: flex;
