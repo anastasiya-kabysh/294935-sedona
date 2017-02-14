@@ -11,6 +11,7 @@ body {
   min-width: 780px;
   margin: 0 auto;
   position: relative;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .clearfix::after {
@@ -591,6 +592,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   line-height: normal;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.15);
 }
 
 .feedback-form-inner {
@@ -623,7 +625,6 @@ body {
 
 .feedback-form-inner input {
   height: 38px;
-  border: none;
   background-color: #f2f2f2;
   color: #000000;
   font-size: 14px;
@@ -1111,7 +1112,7 @@ body {
   background-image: url("../img/filter_background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 800px;
-  background-position: 50% 50%;
+  background-position: 50% 20%;
   /*как позиционировать картинку?*/
 }
 
@@ -1119,13 +1120,17 @@ body {
   float: left;
   padding: 0;
   margin: 0;
-  padding-right: 120px;
+  margin-right: 120px;
   border: none;
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   font-weight: normal;
+}
+
+.form-filter .filter-type {
+  margin-right: 0;
 }
 
 .form-filter legend {
@@ -1242,8 +1247,8 @@ body {
 
 .price-controls {
   position: relative;
-  height: 36px;
-  margin-bottom: 20px;
+  height: 32px;
+  margin-bottom: 22px;
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -1264,18 +1269,18 @@ body {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 32px;
   vertical-align: top;
   cursor: pointer;
 }
 
 .price-controls .min-price, .price-controls .max-price {
   width: 25.5%;
-  padding-left: 65px;
+  padding-left: 20.5%
 }
 
 .price-controls input {
-  width: 50px;
+  width: 63%;
   margin: 0;
   color: inherit;
   font: inherit;
@@ -1364,11 +1369,12 @@ body {
   -ms-flex-align: stretch;
   align-items: stretch;
   background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .sort-hotels {
   padding-top: 30px;
-  padding-bottom: 37px;
+  padding-bottom: 30px;
 }
 
 .sort-choice {
@@ -1658,22 +1664,30 @@ body {
 
 .rate .stars {
   display: block;
-  width: 42px;
+  max-width: 115px;
   height: 17px;
   margin-bottom: 45px;
-  background-image: url("../img/star.png");
+  background-image: url(../img/star.png);
   background-position: -1px 0;
   background-repeat: repeat-x;
   background-size: 23px 17px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.rate .stars-4 {
+.rate .stars-first {
   width: 90px;
   height: 17px;
 }
 
-.rate .stars-3 {
+.rate .stars-second {
   width: 65px;
+  height: 17px;
+}
+
+.rate .stars-third {
+  width: 46px;
   height: 17px;
 }
 
