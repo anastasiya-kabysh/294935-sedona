@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -39,7 +40,7 @@
           <h3 class="features-title">Настоящий городок</h3>
           <span>&mdash; №1 &mdash;</span>
           <p class="description">Седона &mdash; не аттракцион для туристов, там течет своя жизнь!</p>
-          <img class="features-image" src="img/sedona1.jpg" width="800" height="400" alt="Sedona">
+          <img class="features-image" src="img/sedona1.jpg" width="67%" height="400" alt="Sedona">
         </div>
         <div class="feature feature-desc icon-house">
           <h3 class="features-title">Жилье</h3>
@@ -59,7 +60,7 @@
              мост дьявола</h3>
           <span>&mdash; №2 &mdash;</span>
           <p class="description">Да, по нему можно пройтись! Если конечно вы осмелитесь</p>
-          <img class="features-image" src="img/sedona2.jpg" width="800" height="400" alt="Sedona">
+          <img class="features-image" src="img/sedona2.jpg" width="67%" height="400" alt="Sedona">
         </div>
         <div class="feature feature-preference">
           <h3 class="features-title">Небольшая
@@ -85,14 +86,14 @@
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <div class="modal-content">
-            <button class="btn-title"><span>Поиск гостиницы в Седоне</span></button>
-            <form class="feedback-form clearfix" action="index.html" method="post">
-              <div class="feedback-form-inner inner-field">
+            <button id="btn-book-hotel" class="btn-title"><span>Поиск гостиницы в Седоне</span></button>
+            <form id="form-book-hotel" class="feedback-form clearfix" action="index.html" method="post">
+              <div class="feedback-form-inner inner-field clearfix">
                 <label for="date-in">Дата заезда</label>
                 <input type="text" class="date-inner" name="date-in" id="date-in" placeholder="24 апреля 2017">
                 <button type="button" class="calendar" name="calendar"></button>
               </div>
-              <div class="feedback-form-inner inner-field">
+              <div class="feedback-form-inner inner-field clearfix">
                 <label for="date-out">Дата выезда</label>
                 <input type="text" class="date-inner" name="date-out" id="date-out" placeholder="4 июля 2017">
                 <button type="button" class="calendar" name="calendar"></button>
@@ -134,6 +135,7 @@
           <a class="btn" href="https://htmlacademy.ru"></a>
         </section>
       </footer>
+      <script defer src="js/script.js"></script>
     </div>
   </body>
 
