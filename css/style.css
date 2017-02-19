@@ -238,12 +238,12 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
   }
 
   .subject {
-    padding-top: 63px;
-    padding-bottom: 46px;
+    padding-top: 59px;
+    padding-bottom: 50px;
     background-color: #ffffff;
     background-image: url("../img/subject.png");
     background-repeat: repeat;
@@ -257,7 +257,7 @@
     text-align: center;
     padding-left: 31.67%;
     padding-right: 31.67%;
-    margin-bottom: 31px;
+    margin-bottom: 29px;
     font-size: 21px;
     line-height: 26px;
     text-transform: uppercase;
@@ -314,7 +314,7 @@
     padding-right: 70%;
     padding-left: 4.5%;
     padding-top: 53px;
-    padding-bottom: 57px;
+    padding-bottom: 53px;
     flex-flow: column wrap;
     align-items: center;
     overflow: hidden;
@@ -334,9 +334,11 @@
   .feature-pictured-left .features-title {
     padding-left: 22.42%;
     padding-right: 27.5%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #ffffff;
     text-transform: uppercase;
+    font-size: 21px;
+    line-height: 22px;
   }
 
   .feature-pictured-left span {
@@ -358,27 +360,25 @@
 
   .feature-desc {
     width: 33.33%;
-    padding-top: 60px;
-    padding-bottom: 80px;
     background-color: #ffffff;
     text-align: center;
     color: #696969;
   }
 
   .feature-desc .features-title {
-    margin-bottom: 22px;
+    margin-bottom: 26px;
   }
 
   .feature.icon-house p {
     letter-spacing: 0;
   }
 
-  .feature.icon-house::before, .feature.icon-burger::before, .feature.icon-souvenirs::before {
+  .feature.icon-house::before {
     content: "";
     display: inline-block;
-    margin-bottom: 19px;
+    margin-bottom: 21px;
     width: 75px;
-    height: 75px;
+    height: 72px;
     background-image: url("../img/hause.png");
     background-repeat: no-repeat;
   }
@@ -386,9 +386,9 @@
   .feature.icon-burger::before {
     content: "";
     display: inline-block;
-    margin-bottom: 22px;
-    width: 75px;
-    height: 75px;
+    margin-bottom: 23px;
+    width: 74px;
+    height: 70px;
     background-image: url("../img/burger.png");
     background-repeat: no-repeat;
   }
@@ -406,21 +406,22 @@
   }
 
   .feature.icon-souvenirs::before {
+    margin-top: -3px;
     content: "";
     display: inline-block;
-    margin-bottom: 22px;
-    width: 75px;
-    height: 75px;
-    background-image: url("../img/souvenirs.png");
+    margin-bottom: 19px;
+    width: 64px;
+    height: 76px;
+    background-image: url(../img/souvenirs.png);
     background-repeat: no-repeat;
   }
 
   .feature-pictured-right {
     flex-basis: 100%;
     padding-left: 69.4%;
-    padding-right: 3.17%;
+    padding-right: 2.8%;
     padding-top: 55px;
-    padding-bottom: 53px;
+    padding-bottom: 51px;
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
@@ -434,9 +435,9 @@
 
   .feature-pictured-right .features-title {
     font-size: 21px;
-    line-height: 23px;
+    line-height: 22px;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     color: #ffffff;
     white-space: pre-line;
   }
@@ -458,7 +459,11 @@
 
   .feature-pictured-right p {
     color: #ffffff;
-    margin-right: -3%;
+    margin-right: 0%;
+    margin-left: 2%;
+    padding-right: 0%;
+    padding-left: 2%;
+    line-height: 20px;
   }
 
   .feature-preference {
@@ -470,7 +475,7 @@
   }
 
   .feature-preference .features-title {
-    margin-bottom: 22px;
+    margin-bottom: 25px;
     white-space: pre-line;
   }
 
@@ -485,7 +490,7 @@
 
   .feature-preference span {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 21px;
     font-weight: normal;
     color: #333333;
     font-weight: normal;
@@ -519,9 +524,9 @@
     margin: 0;
     padding-left: 31.67%;
     padding-right: 31.67%;
-    margin-bottom: 50px;
+    margin-bottom: 46px;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 24px;
     text-transform: uppercase;
     color: #333333;
     font-weight: normal;
@@ -534,8 +539,6 @@
     margin-right: auto;
     position: relative;
     background-color: #ffffff;
-    background-image: url("../img/modalback.png");
-    background-repeat: repeat;
   }
 
   .modal-content .btn-title {
@@ -612,16 +615,16 @@
     flex: 1 1 auto;
     width: 346px;
     height: 38px;
-    padding-left: 12px;
-    vertical-align: middle;
+    padding-left: 10px;
     background-color: #f2f2f2;
     color: #000000;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     line-height: 26px;
     text-transform: uppercase;
     border: 2px solid transparent;
     box-sizing: border-box;
+    letter-spacing: 0;
   }
 
   .feedback-form-inner input::-webkit-input-placeholder {
@@ -648,7 +651,7 @@
   .feedback-form-inner input::placeholder {
     color: #000000;
     opacity: 1;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     line-height: 32px;
     text-transform: uppercase;
@@ -656,7 +659,7 @@
 
   .feedback-form-inner input:hover {
     background-color: #ebebeb;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     line-height: 32px;
     text-transform: uppercase;
@@ -832,6 +835,7 @@
     position: absolute;
     width: 100%;
     bottom: 0;
+    height: 120px;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -843,6 +847,7 @@
 
   .main-footer {
     position: static;
+    height: 120px;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -1007,7 +1012,6 @@
 
   .footer-copyright span {
     align-self: center;
-    margin-right: 3px;
     color: #000000;
     text-transform: uppercase;
   }
@@ -1018,8 +1022,8 @@
     width: 104px;
     background-image: url(../img/copyright.png);
     background-repeat: no-repeat;
-    background-size: 104px 39px;
-    padding-left: 10px;
+    background-size: 113px 39px;
+    padding-left: 8px;
     margin-right: -8px;
   }
 
@@ -1041,7 +1045,7 @@
     padding-top: 27px;
     padding-left: 6%;
     padding-right: 6%;
-    padding-bottom: 20px;
+    padding-bottom: 22px;
     overflow: hidden;
     background-image: url("../img/filter_background.jpg");
     background-repeat: no-repeat;
@@ -1096,8 +1100,8 @@
   .form-filter input[type="checkbox"]+label {
     display: block;
     padding-left: 40px;
-    padding-top: 16px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 9px;
     position: relative;
   }
 
@@ -1429,8 +1433,8 @@
   /*список отелей*/
 
   .items-left {
-    padding-top: 25px;
-    padding-bottom: 31px;
+    padding-top: 30px;
+    padding-bottom: 26px;
     font-size: 14px;
     line-height: 21px;
     font-family: inherit;
@@ -1457,12 +1461,12 @@
   }
 
   .items-desc .hotels-title {
-    display: block;
+    display: inline-block;
     padding: 0;
     margin: 0;
-    margin-bottom: 5px;
     font-size: 21px;
-    line-height: 26px;
+    line-height: 23px;
+    margin-bottom: 7px;
     font-weight: bold;
     text-decoration: none;
     color: #000000;
@@ -1480,7 +1484,7 @@
     margin-bottom: 13px;
     align-self: flex-start;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 21px;
     color: #766357;
     font-weight: normal;
   }
@@ -1499,13 +1503,13 @@
   .items-order .hotels-btn {
     display: inline-block;
     vertical-align: top;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 17px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-right: 18px;
     padding-left: 17px;
-    margin-right: 6px;
+    margin-right: 5px;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 21px;
     font-weight: bold;
     color: #ffffff;
     text-decoration: none;
