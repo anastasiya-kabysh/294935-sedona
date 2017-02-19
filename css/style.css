@@ -314,7 +314,7 @@
     padding-right: 70%;
     padding-left: 4.5%;
     padding-top: 53px;
-    padding-bottom: 53px;
+    padding-bottom: 50px;
     flex-flow: column wrap;
     align-items: center;
     overflow: hidden;
@@ -1572,17 +1572,17 @@
     overflow: hidden;
   }
 
-  .rate .stars-first {
+  .rate .stars-4 {
     width: 90px;
     height: 17px;
   }
 
-  .rate .stars-second {
+  .rate .stars-3 {
     width: 65px;
     height: 17px;
   }
 
-  .rate .stars-third {
+  .rate .stars-2 {
     width: 46px;
     height: 17px;
   }
