@@ -17,24 +17,24 @@
           <nav>
             <ul class="main-nav">
               <li class="main-nav-item"><a href="#">Информация</a></li>
-              <li class="main-nav-item"><a href="catalog.html">Гостиницы</a></li>
               <li class="main-nav-item"><a href="#">Фото и видео</a></li>
               <li class="main-nav-item"><a href="#">Карта штата</a></li>
+              <li class="main-nav-item"><a href="catalog.html">Гостиницы</a></li>
             </ul>
           </nav>
           <div class="logo">
             <a href="index.html"><img src="img/grouplogo.png" width="138" height="70" alt="Логотип Седона"></a>
           </div>
         </div>
-        <div class="header-bottom">
-          <img src="img/headerbottom.png" width="458" height="352" alt="Sedona">
-          <div class="index-mask"></div>
-          <div class="subject">
-            <h3>Седона &mdash; небольшой городок в аризоне, заслуживающий большего!</h3>
-            <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-          </div>
-        </div>
       </header>
+      <div class="index-preview">
+        <img src="img/headerbottom.png" width="458" height="352" alt="Sedona">
+        <div class="index-mask"></div>
+        <div class="subject">
+          <h3>Седона &mdash; небольшой городок в аризоне, заслуживающий большего!</h3>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        </div>
+      </div>
       <section class="features">
         <div class="feature feature-pictured-left">
           <h3 class="features-title">Настоящий городок</h3>
@@ -90,19 +90,19 @@
             <form id="form-book-hotel" class="feedback-form clearfix" action="index.html" method="post">
               <div class="feedback-form-inner inner-field clearfix">
                 <label for="date-in">Дата заезда</label>
-                <input type="text" class="date-inner" name="date-in" id="date-in" placeholder="24 апреля 2017">
+                <input type="text" class="date-inner" name="date-in" id="date-in" value="24 апреля 2017">
                 <button type="button" class="calendar" name="calendar"></button>
               </div>
               <div class="feedback-form-inner inner-field clearfix">
                 <label for="date-out">Дата выезда</label>
-                <input type="text" class="date-inner" name="date-out" id="date-out" placeholder="4 июля 2017">
+                <input type="text" class="date-inner" name="date-out" id="date-out" value="4 июля 2017">
                 <button type="button" class="calendar" name="calendar"></button>
               </div>
               <div class="feedback-form-inner inner-left">
                 <label for="adults">Взрослые</label>
                 <div class="counter">
                   <button type="button" class="inner-btn" name="up" value="&mdash;">&mdash;</button>
-                  <input type="text" name="adults" id="adults" placeholder="2">
+                  <input type="text" name="adults" id="adults" value="2">
                   <button type="button" class="inner-btn" name="down" value="&plus;">+</button>
                 </div>
               </div>
@@ -110,7 +110,7 @@
                 <label for="children">Дети</label>
                 <div class="counter">
                   <button type="button" class="inner-btn" name="up" value="&mdash;">&mdash;</button>
-                  <input type="text" name="children" id="children" placeholder="0">
+                  <input type="text" name="children" id="children" value="0">
                   <button type="button" class="inner-btn" name="down" value="&plus;">+</button>
                 </div>
               </div>
@@ -132,7 +132,7 @@
         </section>
         <section class="footer footer-copyright">
           <span>Website by:</span>
-          <a class="btn" href="https://htmlacademy.ru"></a>
+          <a class="btn"></a>
         </section>
       </footer>
       <script defer src="js/script.js"></script>
