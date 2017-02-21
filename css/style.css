@@ -1276,6 +1276,7 @@ body {
   display: block;
   position: relative;
   height: 32px;
+  font-size: 0;
   margin-bottom: 22px;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -1294,7 +1295,8 @@ body {
 }
 
 .price-controls .min-price {
-  width: 27.5%;
+  text-align: center;
+  width: 50%;
   margin: 0;
   height: 32px;
   font-size: 14px;
@@ -1305,11 +1307,11 @@ body {
   background: none;
   border: none;
   outline: none;
-  padding-left: 14%;
 }
 
 .price-controls .max-price {
-  width: 27.5%;
+  text-align: center;
+  width: 50%;
   margin: 0;
   height: 32px;
   font-size: 14px;
@@ -1320,7 +1322,6 @@ body {
   background: none;
   border: none;
   outline: none;
-  padding-left: 14%;
 }
 
 .range-controls {
